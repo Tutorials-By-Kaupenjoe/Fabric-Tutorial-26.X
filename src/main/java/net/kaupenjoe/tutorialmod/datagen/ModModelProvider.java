@@ -19,6 +19,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.RAW_FLUORITE_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_ORE);
         blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_DEEPSLATE_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_NETHER_ORE);
+        blockModelGenerators.createTrivialCube(ModBlocks.FLUORITE_END_ORE);
 
     }
 
