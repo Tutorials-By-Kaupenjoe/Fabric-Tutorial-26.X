@@ -31,7 +31,12 @@ public class ModBlocks {
             properties -> new DropExperienceBlock(UniformInt.of(3, 6),
                     properties.strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
 
-
+    public static final Block FLUORITE_NETHER_ORE = registerBlock("fluorite_nether_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(1, 5),
+                    properties.strength(3f).requiresCorrectToolForDrops()));
+    public static final Block FLUORITE_END_ORE = registerBlock("fluorite_end_ore",
+            properties -> new DropExperienceBlock(UniformInt.of(4, 8),
+                    properties.strength(6f).requiresCorrectToolForDrops()));
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
         Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name))));

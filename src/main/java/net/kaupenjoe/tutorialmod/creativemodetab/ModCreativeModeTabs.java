@@ -33,6 +33,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.FLUORITE_ORE);
                         output.accept(ModBlocks.FLUORITE_DEEPSLATE_ORE);
 
+                        output.accept(ModBlocks.FLUORITE_NETHER_ORE);
+                        output.accept(ModBlocks.FLUORITE_END_ORE);
+
 
                     }).build());
 
