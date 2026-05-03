@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "fluorite",
+  "key": {
+    "R": "tutorialmod:raw_fluorite"
+  },
+  "pattern": [
+    "RRR",
+    "RRR",
+    "RRR"
+  ],
+  "result": {
+    "id": "tutorialmod:raw_fluorite_block"
+  }
+}
