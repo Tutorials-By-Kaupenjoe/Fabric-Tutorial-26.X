@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.block;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -37,6 +38,11 @@ public class ModBlocks {
     public static final Block FLUORITE_END_ORE = registerBlock("fluorite_end_ore",
             properties -> new DropExperienceBlock(UniformInt.of(4, 8),
                     properties.strength(6f).requiresCorrectToolForDrops()));
+
+    public static final Block MAGIC_BLOCK = registerBlock("magic_block",
+            properties -> new MagicBlock(properties.strength(2f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {
