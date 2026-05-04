@@ -20,6 +20,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FLUORITE);
                         output.accept(ModItems.RAW_FLUORITE);
 
+                        output.accept(ModItems.CHISEL);
+
 
                     }).build());
 

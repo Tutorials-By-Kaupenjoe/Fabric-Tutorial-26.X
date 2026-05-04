@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.item.custom.ChiselItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -16,6 +17,7 @@ public class ModItems {
     public static final Item FLUORITE = registerItem("fluorite", Item::new);
     public static final Item RAW_FLUORITE = registerItem("raw_fluorite", Item::new);
 
+    public static final Item CHISEL = registerItem("chisel", properties -> new ChiselItem(properties.durability(32)));
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
