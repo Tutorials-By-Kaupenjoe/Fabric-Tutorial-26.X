@@ -43,6 +43,9 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.FLUORITE_FENCE);
         dropSelf(ModBlocks.FLUORITE_FENCE_GATE);
         dropSelf(ModBlocks.FLUORITE_WALL);
+        dropSelf(ModBlocks.FLUORITE_TRAPDOOR);
+
+        add(ModBlocks.FLUORITE_DOOR, this::createDoorTable);
 
     }
 

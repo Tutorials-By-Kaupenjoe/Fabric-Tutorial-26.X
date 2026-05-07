@@ -24,7 +24,12 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.FLUORITE_END_ORE)
                 .add(ModBlocks.MAGIC_BLOCK)
                 .add(ModBlocks.FLUORITE_STAIRS)
-                .add(ModBlocks.FLUORITE_SLAB);
+                .add(ModBlocks.FLUORITE_SLAB)
+                .add(ModBlocks.FLUORITE_FENCE)
+                .add(ModBlocks.FLUORITE_FENCE_GATE)
+                .add(ModBlocks.FLUORITE_WALL)
+                .add(ModBlocks.FLUORITE_DOOR)
+                .add(ModBlocks.FLUORITE_TRAPDOOR);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
@@ -41,6 +46,9 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.FENCES).add(ModBlocks.FLUORITE_FENCE);
         valueLookupBuilder(BlockTags.FENCE_GATES).add(ModBlocks.FLUORITE_FENCE_GATE);
         valueLookupBuilder(BlockTags.WALLS).add(ModBlocks.FLUORITE_WALL);
+
+        valueLookupBuilder(BlockTags.DOORS).add(ModBlocks.FLUORITE_DOOR);
+        valueLookupBuilder(BlockTags.TRAPDOORS).add(ModBlocks.FLUORITE_TRAPDOOR);
 
 
     }

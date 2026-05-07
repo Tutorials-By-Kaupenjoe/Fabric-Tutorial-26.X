@@ -33,6 +33,9 @@ public class ModModelProvider extends FabricModelProvider {
                 .fenceGate(ModBlocks.FLUORITE_FENCE_GATE)
                 .wall(ModBlocks.FLUORITE_WALL);
 
+        blockModelGenerators.createDoor(ModBlocks.FLUORITE_DOOR);
+        blockModelGenerators.createTrapdoor(ModBlocks.FLUORITE_TRAPDOOR);
+
 
     }
 

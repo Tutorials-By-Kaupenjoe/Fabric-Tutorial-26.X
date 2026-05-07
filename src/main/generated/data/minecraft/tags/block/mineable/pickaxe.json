@@ -8,6 +8,11 @@
     "tutorialmod:fluorite_end_ore",
     "tutorialmod:magic_block",
     "tutorialmod:fluorite_stairs",
-    "tutorialmod:fluorite_slab"
+    "tutorialmod:fluorite_slab",
+    "tutorialmod:fluorite_fence",
+    "tutorialmod:fluorite_fence_gate",
+    "tutorialmod:fluorite_wall",
+    "tutorialmod:fluorite_door",
+    "tutorialmod:fluorite_trapdoor"
   ]
 }
