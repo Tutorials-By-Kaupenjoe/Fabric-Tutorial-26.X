@@ -38,6 +38,8 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.FLUORITE_STAIRS);
         add(ModBlocks.FLUORITE_SLAB, this::createSlabItemTable);
 
+        dropSelf(ModBlocks.FLUORITE_BUTTON);
+        dropSelf(ModBlocks.FLUORITE_PRESSURE_PLATE);
 
     }
 

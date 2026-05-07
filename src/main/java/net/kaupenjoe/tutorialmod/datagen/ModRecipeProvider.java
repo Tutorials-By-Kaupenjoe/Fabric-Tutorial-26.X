@@ -63,6 +63,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
                 slab(RecipeCategory.BUILDING_BLOCKS, ModBlocks.FLUORITE_SLAB, ModBlocks.FLUORITE_BLOCK);
 
+                buttonBuilder(ModBlocks.FLUORITE_BUTTON, Ingredient.of(ModItems.FLUORITE))
+                        .unlockedBy(getHasName(ModItems.FLUORITE), has(ModItems.FLUORITE))
+                        .group("fluorite")
+                        .save(output);
+                pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE, ModItems.FLUORITE);
+
+
             }
         };
     }

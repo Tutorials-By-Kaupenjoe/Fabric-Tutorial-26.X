@@ -26,7 +26,9 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockModelGenerators.family(ModBlocks.FLUORITE_BLOCK)
                 .stairs(ModBlocks.FLUORITE_STAIRS)
-                .slab(ModBlocks.FLUORITE_SLAB);
+                .slab(ModBlocks.FLUORITE_SLAB)
+                .button(ModBlocks.FLUORITE_BUTTON)
+                .pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE);
 
 
     }

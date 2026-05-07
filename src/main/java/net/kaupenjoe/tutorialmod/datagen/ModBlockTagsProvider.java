@@ -35,6 +35,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
         valueLookupBuilder(BlockTags.STAIRS).add(ModBlocks.FLUORITE_STAIRS);
         valueLookupBuilder(BlockTags.SLABS).add(ModBlocks.FLUORITE_SLAB);
+        valueLookupBuilder(BlockTags.BUTTONS).add(ModBlocks.FLUORITE_BUTTON);
+        valueLookupBuilder(BlockTags.PRESSURE_PLATES).add(ModBlocks.FLUORITE_PRESSURE_PLATE);
 
 
     }
