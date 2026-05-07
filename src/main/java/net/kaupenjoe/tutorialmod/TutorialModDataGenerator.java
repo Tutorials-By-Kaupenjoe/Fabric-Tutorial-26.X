@@ -2,10 +2,7 @@ package net.kaupenjoe.tutorialmod;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.kaupenjoe.tutorialmod.datagen.ModBlockLootTableProvider;
-import net.kaupenjoe.tutorialmod.datagen.ModBlockTagsProvider;
-import net.kaupenjoe.tutorialmod.datagen.ModModelProvider;
-import net.kaupenjoe.tutorialmod.datagen.ModRecipeProvider;
+import net.kaupenjoe.tutorialmod.datagen.*;
 
 public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -16,5 +13,6 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModBlockTagsProvider::new);
 		pack.addProvider(ModBlockLootTableProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModItemTagsProvider::new);
 	}
 }

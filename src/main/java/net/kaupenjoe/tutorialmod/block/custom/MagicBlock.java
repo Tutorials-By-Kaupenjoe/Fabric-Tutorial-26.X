@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.block.custom;
 
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
@@ -48,6 +49,6 @@ public class MagicBlock extends Block {
     }
 
     private boolean isValidItem(ItemStack item) {
-        return item.is(ModItems.FLUORITE) || item.is(Items.IRON_INGOT);
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 }
