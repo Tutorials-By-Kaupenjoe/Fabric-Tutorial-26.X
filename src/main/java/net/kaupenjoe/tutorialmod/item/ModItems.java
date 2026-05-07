@@ -7,11 +7,16 @@ import net.kaupenjoe.tutorialmod.item.custom.ChiselItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class ModItems {
@@ -20,7 +25,13 @@ public class ModItems {
 
     public static final Item CHISEL = registerItem("chisel", properties -> new ChiselItem(properties.durability(32)));
     public static final Item STRAWBERRY = registerItem("strawberry", properties -> new Item(properties
-            .food(ModFoods.STRAWBERRY, ModFoods.STRAWBERRY_CONSUMABLE)));
+            .food(ModFoods.STRAWBERRY, ModFoods.STRAWBERRY_CONSUMABLE)) {
+        @Override
+        public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
+            builder.accept(Component.translatable("tooltip.tutorialmod.strawberry"));
+            super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
+        }
+    });
 
     public static final Item COMBUSTIBLE_SPORES = registerItem("combustible_spores", properties -> new Item(properties.stacksTo(16)));
 

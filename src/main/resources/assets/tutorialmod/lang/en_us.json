@@ -16,7 +16,12 @@
 
 
   "creativemodetab.tutorialmod.fluorite_items": "Fluorite Tutorial Items",
-  "creativemodetab.tutorialmod.fluorite_blocks": "Fluorite Tutorial Blocks"
+  "creativemodetab.tutorialmod.fluorite_blocks": "Fluorite Tutorial Blocks",
+
+  "tooltip.tutorialmod.chisel": "Press §eShift§r for more Information!",
+  "tooltip.tutorialmod.chisel.shift_down": "Chisels Blocks into other Blocks",
+  "tooltip.tutorialmod.strawberry": "This is delicious!",
+  "tooltip.tutorialmod.magic_block": "This block seems quite §2MAGICAL§r"
 
 
 }
