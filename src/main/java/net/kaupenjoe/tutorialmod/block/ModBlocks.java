@@ -14,9 +14,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.function.Consumer;
@@ -47,6 +45,13 @@ public class ModBlocks {
     public static final Block MAGIC_BLOCK = registerBlock("magic_block",
             properties -> new MagicBlock(properties.strength(2f)
                     .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)), Component.translatable("tooltip.tutorialmod.magic_block"));
+
+
+    public static final Block FLUORITE_STAIRS = registerBlock("fluorite_stairs",
+            properties -> new StairBlock(ModBlocks.FLUORITE_BLOCK.defaultBlockState(),
+                    properties.strength(3f).requiresCorrectToolForDrops()));
+    public static final Block FLUORITE_SLAB = registerBlock("fluorite_slab",
+            properties -> new SlabBlock(properties.strength(3f).requiresCorrectToolForDrops()));
 
 
 

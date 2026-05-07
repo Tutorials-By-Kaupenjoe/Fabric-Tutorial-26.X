@@ -42,6 +42,9 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.FLUORITE_END_ORE);
                         output.accept(ModBlocks.MAGIC_BLOCK);
 
+                        output.accept(ModBlocks.FLUORITE_STAIRS);
+                        output.accept(ModBlocks.FLUORITE_SLAB);
+
 
                     }).build());
 

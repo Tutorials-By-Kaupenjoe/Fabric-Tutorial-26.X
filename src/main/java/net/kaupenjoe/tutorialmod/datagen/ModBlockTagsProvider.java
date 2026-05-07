@@ -22,7 +22,9 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.FLUORITE_DEEPSLATE_ORE)
                 .add(ModBlocks.FLUORITE_NETHER_ORE)
                 .add(ModBlocks.FLUORITE_END_ORE)
-                .add(ModBlocks.MAGIC_BLOCK);
+                .add(ModBlocks.MAGIC_BLOCK)
+                .add(ModBlocks.FLUORITE_STAIRS)
+                .add(ModBlocks.FLUORITE_SLAB);
 
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.FLUORITE_DEEPSLATE_ORE);
@@ -30,6 +32,10 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.FLUORITE_NETHER_ORE)
                 .add(ModBlocks.FLUORITE_END_ORE);
+
+        valueLookupBuilder(BlockTags.STAIRS).add(ModBlocks.FLUORITE_STAIRS);
+        valueLookupBuilder(BlockTags.SLABS).add(ModBlocks.FLUORITE_SLAB);
+
 
     }
 }

@@ -6,6 +6,8 @@
     "tutorialmod:fluorite_deepslate_ore",
     "tutorialmod:fluorite_nether_ore",
     "tutorialmod:fluorite_end_ore",
-    "tutorialmod:magic_block"
+    "tutorialmod:magic_block",
+    "tutorialmod:fluorite_stairs",
+    "tutorialmod:fluorite_slab"
   ]
 }
