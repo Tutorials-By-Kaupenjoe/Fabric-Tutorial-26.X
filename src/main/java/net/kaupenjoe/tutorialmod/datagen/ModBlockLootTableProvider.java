@@ -40,6 +40,9 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.FLUORITE_BUTTON);
         dropSelf(ModBlocks.FLUORITE_PRESSURE_PLATE);
+        dropSelf(ModBlocks.FLUORITE_FENCE);
+        dropSelf(ModBlocks.FLUORITE_FENCE_GATE);
+        dropSelf(ModBlocks.FLUORITE_WALL);
 
     }
 

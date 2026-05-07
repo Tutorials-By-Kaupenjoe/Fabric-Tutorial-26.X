@@ -17,6 +17,9 @@
   "block.tutorialmod.fluorite_slab": "Fluorite Slab",
   "block.tutorialmod.fluorite_button": "Fluorite Button",
   "block.tutorialmod.fluorite_pressure_plate": "Fluorite Pressure Plate",
+  "block.tutorialmod.fluorite_fence": "Fluorite Fence",
+  "block.tutorialmod.fluorite_fence_gate": "Fluorite Fence Gate",
+  "block.tutorialmod.fluorite_wall": "Fluorite Wall",
 
 
   "creativemodetab.tutorialmod.fluorite_items": "Fluorite Tutorial Items",

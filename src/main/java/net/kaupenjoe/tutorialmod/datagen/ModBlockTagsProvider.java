@@ -38,6 +38,10 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         valueLookupBuilder(BlockTags.BUTTONS).add(ModBlocks.FLUORITE_BUTTON);
         valueLookupBuilder(BlockTags.PRESSURE_PLATES).add(ModBlocks.FLUORITE_PRESSURE_PLATE);
 
+        valueLookupBuilder(BlockTags.FENCES).add(ModBlocks.FLUORITE_FENCE);
+        valueLookupBuilder(BlockTags.FENCE_GATES).add(ModBlocks.FLUORITE_FENCE_GATE);
+        valueLookupBuilder(BlockTags.WALLS).add(ModBlocks.FLUORITE_WALL);
+
 
     }
 }

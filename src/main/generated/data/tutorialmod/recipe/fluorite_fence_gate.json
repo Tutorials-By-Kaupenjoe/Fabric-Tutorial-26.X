@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "fluorite",
+  "key": {
+    "#": "minecraft:stick",
+    "W": "tutorialmod:fluorite"
+  },
+  "pattern": [
+    "#W#",
+    "#W#"
+  ],
+  "result": {
+    "id": "tutorialmod:fluorite_fence_gate"
+  }
+}

@@ -28,7 +28,10 @@ public class ModModelProvider extends FabricModelProvider {
                 .stairs(ModBlocks.FLUORITE_STAIRS)
                 .slab(ModBlocks.FLUORITE_SLAB)
                 .button(ModBlocks.FLUORITE_BUTTON)
-                .pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE);
+                .pressurePlate(ModBlocks.FLUORITE_PRESSURE_PLATE)
+                .fence(ModBlocks.FLUORITE_FENCE)
+                .fenceGate(ModBlocks.FLUORITE_FENCE_GATE)
+                .wall(ModBlocks.FLUORITE_WALL);
 
 
     }
