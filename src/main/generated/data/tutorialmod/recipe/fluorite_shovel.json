@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fluorite",
+  "key": {
+    "F": "tutorialmod:fluorite",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "F",
+    "S",
+    "S"
+  ],
+  "result": {
+    "id": "tutorialmod:fluorite_shovel"
+  }
+}

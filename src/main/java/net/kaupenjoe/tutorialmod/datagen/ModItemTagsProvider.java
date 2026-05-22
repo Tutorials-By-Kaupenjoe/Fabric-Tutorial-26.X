@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 
 import java.util.concurrent.CompletableFuture;
@@ -21,5 +22,12 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(Items.IRON_INGOT)
                 .add(Items.COAL)
                 .add(Items.BRICK);
+
+        valueLookupBuilder(ItemTags.SWORDS).add(ModItems.FLUORITE_SWORD);
+        valueLookupBuilder(ItemTags.PICKAXES).add(ModItems.FLUORITE_PICKAXE);
+        valueLookupBuilder(ItemTags.SHOVELS).add(ModItems.FLUORITE_SHOVEL);
+        valueLookupBuilder(ItemTags.AXES).add(ModItems.FLUORITE_AXE);
+        valueLookupBuilder(ItemTags.HOES).add(ModItems.FLUORITE_HOE);
+        valueLookupBuilder(ItemTags.SPEARS).add(ModItems.FLUORITE_SPEAR);
     }
 }

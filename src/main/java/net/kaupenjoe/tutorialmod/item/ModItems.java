@@ -10,10 +10,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 
 import java.util.function.Consumer;
@@ -34,6 +31,21 @@ public class ModItems {
     });
 
     public static final Item COMBUSTIBLE_SPORES = registerItem("combustible_spores", properties -> new Item(properties.stacksTo(16)));
+
+    public static final Item FLUORITE_SWORD = registerItem("fluorite_sword",
+            properties -> new Item(properties.sword(ModToolMaterials.FLUORITE, 3, -2.4f)));
+    public static final Item FLUORITE_PICKAXE = registerItem("fluorite_pickaxe",
+            properties -> new Item(properties.pickaxe(ModToolMaterials.FLUORITE, 1, -2.8f)));
+    public static final Item FLUORITE_SHOVEL = registerItem("fluorite_shovel",
+            properties -> new ShovelItem(ModToolMaterials.FLUORITE, 1.5f, -3.0f, properties));
+    public static final Item FLUORITE_AXE = registerItem("fluorite_axe",
+            properties -> new AxeItem(ModToolMaterials.FLUORITE, 6f, -3.2f, properties));
+    public static final Item FLUORITE_HOE = registerItem("fluorite_hoe",
+            properties -> new HoeItem(ModToolMaterials.FLUORITE, 0f, -3.0f, properties));
+    public static final Item FLUORITE_SPEAR = registerItem("fluorite_spear",
+            properties -> new Item(properties.spear(ModToolMaterials.FLUORITE, 0.95F, 0.95F, 0.6F,
+                    2.5F, 11.0F, 6.75F, 5.1F, 11.25F, 4.6F)));
+
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {

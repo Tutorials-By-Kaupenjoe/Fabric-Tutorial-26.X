@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fluorite",
+  "key": {
+    "F": "tutorialmod:fluorite",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "FFF",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "id": "tutorialmod:fluorite_pickaxe"
+  }
+}

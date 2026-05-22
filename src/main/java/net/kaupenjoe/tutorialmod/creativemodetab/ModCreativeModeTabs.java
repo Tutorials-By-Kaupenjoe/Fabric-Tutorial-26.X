@@ -25,6 +25,13 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.COMBUSTIBLE_SPORES);
 
+                        output.accept(ModItems.FLUORITE_SWORD);
+                        output.accept(ModItems.FLUORITE_PICKAXE);
+                        output.accept(ModItems.FLUORITE_SHOVEL);
+                        output.accept(ModItems.FLUORITE_AXE);
+                        output.accept(ModItems.FLUORITE_HOE);
+                        output.accept(ModItems.FLUORITE_SPEAR);
+
 
                     }).build());
 
