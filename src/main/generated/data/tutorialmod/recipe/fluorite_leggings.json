@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fluorite",
+  "key": {
+    "F": "tutorialmod:fluorite"
+  },
+  "pattern": [
+    "FFF",
+    "F F",
+    "F F"
+  ],
+  "result": {
+    "id": "tutorialmod:fluorite_leggings"
+  }
+}

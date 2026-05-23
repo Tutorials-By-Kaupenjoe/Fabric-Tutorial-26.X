@@ -14,5 +14,6 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModBlockLootTableProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
 		pack.addProvider(ModItemTagsProvider::new);
+		pack.addProvider(ModEquipmentAssetProvider::new);
 	}
 }

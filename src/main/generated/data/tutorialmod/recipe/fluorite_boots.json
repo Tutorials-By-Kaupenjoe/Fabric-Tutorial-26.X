@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "fluorite",
+  "key": {
+    "F": "tutorialmod:fluorite"
+  },
+  "pattern": [
+    "F F",
+    "F F"
+  ],
+  "result": {
+    "id": "tutorialmod:fluorite_boots"
+  }
+}

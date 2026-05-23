@@ -154,6 +154,40 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group("fluorite")
                         .save(output);
 
+                shaped(RecipeCategory.COMBAT, ModItems.FLUORITE_HELMET)
+                        .pattern("FFF")
+                        .pattern("F F")
+                        .define('F', ModItems.FLUORITE)
+                        .unlockedBy(getHasName(ModItems.FLUORITE), has(ModItems.FLUORITE))
+                        .group("fluorite")
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT, ModItems.FLUORITE_CHESTPLATE)
+                        .pattern("F F")
+                        .pattern("FFF")
+                        .pattern("FFF")
+                        .define('F', ModItems.FLUORITE)
+                        .unlockedBy(getHasName(ModItems.FLUORITE), has(ModItems.FLUORITE))
+                        .group("fluorite")
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT, ModItems.FLUORITE_LEGGINGS)
+                        .pattern("FFF")
+                        .pattern("F F")
+                        .pattern("F F")
+                        .define('F', ModItems.FLUORITE)
+                        .unlockedBy(getHasName(ModItems.FLUORITE), has(ModItems.FLUORITE))
+                        .group("fluorite")
+                        .save(output);
+
+                shaped(RecipeCategory.COMBAT, ModItems.FLUORITE_BOOTS)
+                        .pattern("F F")
+                        .pattern("F F")
+                        .define('F', ModItems.FLUORITE)
+                        .unlockedBy(getHasName(ModItems.FLUORITE), has(ModItems.FLUORITE))
+                        .group("fluorite")
+                        .save(output);
+
 
             }
         };

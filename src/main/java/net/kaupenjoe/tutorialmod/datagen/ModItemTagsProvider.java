@@ -29,5 +29,11 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         valueLookupBuilder(ItemTags.AXES).add(ModItems.FLUORITE_AXE);
         valueLookupBuilder(ItemTags.HOES).add(ModItems.FLUORITE_HOE);
         valueLookupBuilder(ItemTags.SPEARS).add(ModItems.FLUORITE_SPEAR);
+
+        valueLookupBuilder(ItemTags.HEAD_ARMOR).add(ModItems.FLUORITE_HELMET);
+        valueLookupBuilder(ItemTags.CHEST_ARMOR).add(ModItems.FLUORITE_CHESTPLATE);
+        valueLookupBuilder(ItemTags.LEG_ARMOR).add(ModItems.FLUORITE_LEGGINGS);
+        valueLookupBuilder(ItemTags.FOOT_ARMOR).add(ModItems.FLUORITE_BOOTS);
+
     }
 }
