@@ -1,5 +1,10 @@
 {
   "layers": {
+    "horse_body": [
+      {
+        "texture": "tutorialmod:fluorite"
+      }
+    ],
     "humanoid": [
       {
         "texture": "tutorialmod:fluorite"

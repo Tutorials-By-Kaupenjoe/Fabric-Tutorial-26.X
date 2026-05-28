@@ -37,6 +37,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FLUORITE_LEGGINGS);
                         output.accept(ModItems.FLUORITE_BOOTS);
 
+                        output.accept(ModItems.FLUORITE_HORSE_ARMOR);
+
 
                     }).build());
 

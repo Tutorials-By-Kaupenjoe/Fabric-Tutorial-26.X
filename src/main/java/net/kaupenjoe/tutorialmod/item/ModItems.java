@@ -56,6 +56,9 @@ public class ModItems {
     public static final Item FLUORITE_BOOTS = registerItem("fluorite_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
+    public static final Item FLUORITE_HORSE_ARMOR = registerItem("fluorite_horse_armor",
+            properties -> new Item(properties.horseArmor(ModArmorMaterials.FLUORITE_ARMOR_MATERIAL)));
+
 
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
