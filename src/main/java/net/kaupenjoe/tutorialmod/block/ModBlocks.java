@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.block;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.custom.FluoriteLampBlock;
 import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -81,6 +82,9 @@ public class ModBlocks {
             properties -> new TrapDoorBlock(BlockSetType.IRON, properties.strength(3f)
                     .requiresCorrectToolForDrops().noOcclusion()));
 
+    public static final Block FLUORITE_LAMP = registerBlock("fluorite_lamp",
+            properties -> new FluoriteLampBlock(properties.strength(3f)
+                    .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(FluoriteLampBlock.CLICKED) ? 15 : 0)));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, Component... tooltips) {

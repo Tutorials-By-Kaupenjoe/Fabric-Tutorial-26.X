@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "tutorialmod:block/fluorite_lamp"
+    },
+    "clicked=true": {
+      "model": "tutorialmod:block/fluorite_lamp_on"
+    }
+  }
+}
