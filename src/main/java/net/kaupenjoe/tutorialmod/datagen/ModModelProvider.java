@@ -99,5 +99,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.createFlatItemModel(ModItems.KAUPEN_BOW, ModelTemplates.BOW);
         itemModelGenerators.generateBow(ModItems.KAUPEN_BOW);
 
+        itemModelGenerators.declareCustomModelItem(ModItems.SCULKBEAM_STAFF);
+
     }
 }
