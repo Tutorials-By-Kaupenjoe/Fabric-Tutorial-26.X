@@ -95,5 +95,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.itemModelOutput.accept(ModItems.CHISEL,
                 new ClientItem(new ConditionalItemModel.Unbaked(Optional.empty(), new HasComponent(ModDataComponents.COORDINATES, false),
                         unbakedUsedChisel, unbakedChisel), new ClientItem.Properties(false, false, 1f)).model());
+
+        itemModelGenerators.createFlatItemModel(ModItems.KAUPEN_BOW, ModelTemplates.BOW);
+        itemModelGenerators.generateBow(ModItems.KAUPEN_BOW);
+
     }
 }
