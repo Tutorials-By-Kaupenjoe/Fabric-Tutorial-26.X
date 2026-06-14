@@ -43,6 +43,12 @@
   "block.tutorialmod.fluorite_lamp": "Fluorite Lamp",
   "block.tutorialmod.pedestal": "Pedestal",
 
+  "painting.tutorialmod.world.title": "World",
+  "painting.tutorialmod.world.author": "NanoAttack",
+  "painting.tutorialmod.shrimp.title": "Shrimp",
+  "painting.tutorialmod.shrimp.author": "NanoAttack",
+  "painting.tutorialmod.saw_them.title": "Saw Them",
+  "painting.tutorialmod.saw_them.author": "NanoAttack",
 
   "creativemodetab.tutorialmod.fluorite_items": "Fluorite Tutorial Items",
   "creativemodetab.tutorialmod.fluorite_blocks": "Fluorite Tutorial Blocks",

@@ -1,0 +1,13 @@
+{
+  "asset_id": "tutorialmod:saw_them",
+  "author": {
+    "color": "gray",
+    "translate": "painting.tutorialmod.saw_them.author"
+  },
+  "height": 2,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.tutorialmod.saw_them.title"
+  },
+  "width": 2
+}

@@ -1,0 +1,13 @@
+{
+  "asset_id": "tutorialmod:shrimp",
+  "author": {
+    "color": "gray",
+    "translate": "painting.tutorialmod.shrimp.author"
+  },
+  "height": 1,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.tutorialmod.shrimp.title"
+  },
+  "width": 2
+}

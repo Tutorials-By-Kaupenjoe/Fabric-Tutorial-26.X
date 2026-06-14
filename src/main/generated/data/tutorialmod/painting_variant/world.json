@@ -1,0 +1,13 @@
+{
+  "asset_id": "tutorialmod:world",
+  "author": {
+    "color": "gray",
+    "translate": "painting.tutorialmod.world.author"
+  },
+  "height": 2,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.tutorialmod.world.title"
+  },
+  "width": 2
+}
