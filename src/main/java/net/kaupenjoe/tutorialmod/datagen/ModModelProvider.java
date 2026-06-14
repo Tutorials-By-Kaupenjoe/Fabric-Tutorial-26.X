@@ -61,6 +61,8 @@ public class ModModelProvider extends FabricModelProvider {
                         new MultiVariant(WeightedList.<Variant>builder().add(new Variant(lampOnIdentifier)).build()),
                         new MultiVariant(WeightedList.<Variant>builder().add(new Variant(lampOffIdentifier)).build()))));
 
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.PEDESTAL_BLOCK);
+
     }
 
     @Override

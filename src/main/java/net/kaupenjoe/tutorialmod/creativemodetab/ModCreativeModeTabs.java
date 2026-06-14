@@ -69,6 +69,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.FLUORITE_TRAPDOOR);
 
                         output.accept(ModBlocks.FLUORITE_LAMP);
+                        output.accept(ModBlocks.PEDESTAL_BLOCK);
 
 
                     }).build());

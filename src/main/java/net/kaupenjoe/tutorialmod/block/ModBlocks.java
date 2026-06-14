@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.block;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.custom.FluoriteLampBlock;
 import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
+import net.kaupenjoe.tutorialmod.block.custom.PedestalBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -85,6 +86,9 @@ public class ModBlocks {
     public static final Block FLUORITE_LAMP = registerBlock("fluorite_lamp",
             properties -> new FluoriteLampBlock(properties.strength(3f)
                     .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(FluoriteLampBlock.CLICKED) ? 15 : 0)));
+
+    public static final Block PEDESTAL_BLOCK = registerBlock("pedestal",
+            properties -> new PedestalBlock(properties.strength(3f).requiresCorrectToolForDrops()));
 
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function, Component... tooltips) {
