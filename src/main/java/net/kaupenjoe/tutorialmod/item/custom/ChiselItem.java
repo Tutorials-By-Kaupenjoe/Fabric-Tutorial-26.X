@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.item.custom;
 
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
+import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
@@ -57,6 +58,7 @@ public class ChiselItem extends Item {
             context.getItemInHand().hurtAndBreak(1, context.getPlayer(), context.getHand());
 
             context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
+            context.getPlayer().awardStat(ModStats.CHISEL_USED_STAT, 1);
         }
 
         return InteractionResult.SUCCESS;

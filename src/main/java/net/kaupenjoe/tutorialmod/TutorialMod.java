@@ -7,6 +7,7 @@ import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.registries.ModFuels;
+import net.kaupenjoe.tutorialmod.stat.ModStats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,6 +24,7 @@ public class TutorialMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModDataComponents.registerDataComponents();
+		ModStats.registerStats();
 
 
 		ModFuels.registerFuels();
