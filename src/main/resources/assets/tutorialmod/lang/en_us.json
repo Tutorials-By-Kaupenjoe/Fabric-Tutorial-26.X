@@ -21,6 +21,8 @@
   "item.tutorialmod.kaupen_bow": "Kaupen Bow",
   "item.tutorialmod.sculkbeam_staff": "Sculkbeam Staff",
 
+  "item.tutorialmod.strawberry_seeds": "Strawberry Seeds",
+
 
   "block.tutorialmod.fluorite_block": "Block of Fluorite",
   "block.tutorialmod.raw_fluorite_block": "Block of Raw Fluorite",
@@ -42,6 +44,9 @@
 
   "block.tutorialmod.fluorite_lamp": "Fluorite Lamp",
   "block.tutorialmod.pedestal": "Pedestal",
+
+  "block.tutorialmod.strawberry_crop": "Strawberry Crop",
+
 
   "painting.tutorialmod.world.title": "World",
   "painting.tutorialmod.world.author": "NanoAttack",

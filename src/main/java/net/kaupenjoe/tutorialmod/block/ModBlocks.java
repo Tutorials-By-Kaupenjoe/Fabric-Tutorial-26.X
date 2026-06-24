@@ -4,6 +4,7 @@ import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.custom.FluoriteLampBlock;
 import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
 import net.kaupenjoe.tutorialmod.block.custom.PedestalBlock;
+import net.kaupenjoe.tutorialmod.block.custom.StrawberryCropBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -90,6 +91,10 @@ public class ModBlocks {
     public static final Block PEDESTAL_BLOCK = registerBlock("pedestal",
             properties -> new PedestalBlock(properties.strength(3f).requiresCorrectToolForDrops()));
 
+    public static final Block STRAWBERRY_CROP = registerBlockWithoutBlockItem("strawberry_crop",
+            properties -> new StrawberryCropBlock(properties.noCollision().randomTicks().instabreak().sound(SoundType.CROP)
+                    .pushReaction(PushReaction.DESTROY)));
+
 
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();
@@ -113,6 +118,11 @@ public class ModBlocks {
                         super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
                     }
                 });
+    }
+
+    private static Block registerBlockWithoutBlockItem(String name, Function<BlockBehaviour.Properties, Block> function) {
+        Block toRegister = function.apply(BlockBehaviour.Properties.of().setId(ResourceKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name))));
+        return Registry.register(BuiltInRegistries.BLOCK, Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name), toRegister);
     }
 
     private static Block registerBlock(String name, Function<BlockBehaviour.Properties, Block> function) {

@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.food.ModFoods;
 import net.kaupenjoe.tutorialmod.item.custom.ChiselItem;
 import net.minecraft.core.Registry;
@@ -64,6 +65,9 @@ public class ModItems {
 
     public static final Item SCULKBEAM_STAFF = registerItem("sculkbeam_staff",
             properties -> new Item(properties.stacksTo(1)));
+
+    public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds",
+            properties -> new BlockItem(ModBlocks.STRAWBERRY_CROP, properties.useItemDescriptionPrefix()));
 
 
     public static ResourceKey<Item> getRK(Item item) {

@@ -59,6 +59,9 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         tag(ModTags.Blocks.INCORRECT_FOR_FLUORITE_TOOL)
                 .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
+        tag(BlockTags.CROPS)
+                .add(ModBlocks.getRK(ModBlocks.STRAWBERRY_CROP));
+
 
     }
 }

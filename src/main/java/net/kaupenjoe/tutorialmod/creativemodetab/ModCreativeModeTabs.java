@@ -41,6 +41,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KAUPEN_BOW);
                         output.accept(ModItems.SCULKBEAM_STAFF);
 
+                        output.accept(ModItems.STRAWBERRY_SEEDS);
+
 
                     }).build());
 
