@@ -94,7 +94,9 @@ public class ModBlocks {
     public static final Block HONEY_BERRY_BUSH = registerBlockWithoutBlockItem("honey_berry_bush",
             properties -> new HoneyBerryBushBlock(properties.randomTicks().noCollision().sound(SoundType.SWEET_BERRY_BUSH)
                     .pushReaction(PushReaction.DESTROY)));
-
+    public static final Block RICE_CROP = registerBlockWithoutBlockItem("rice_crop",
+            properties -> new RiceCropBlock(properties.noCollision().randomTicks().instabreak().sound(SoundType.CROP)
+                    .pushReaction(PushReaction.DESTROY)));
 
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();

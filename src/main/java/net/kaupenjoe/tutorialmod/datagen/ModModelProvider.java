@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.custom.FluoriteLampBlock;
 import net.kaupenjoe.tutorialmod.block.custom.HoneyBerryBushBlock;
+import net.kaupenjoe.tutorialmod.block.custom.RiceCropBlock;
 import net.kaupenjoe.tutorialmod.block.custom.StrawberryCropBlock;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.item.ModArmorMaterials;
@@ -67,6 +68,7 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createCropBlock(ModBlocks.STRAWBERRY_CROP, StrawberryCropBlock.AGE, 0, 1, 2, 3, 4, 5);
         blockModelGenerators.createCrossBlock(ModBlocks.HONEY_BERRY_BUSH, BlockModelGenerators.PlantType.NOT_TINTED,
                 HoneyBerryBushBlock.AGE, 0, 1, 2, 3);
+        blockModelGenerators.createCropBlock(ModBlocks.RICE_CROP, RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 
     }
 

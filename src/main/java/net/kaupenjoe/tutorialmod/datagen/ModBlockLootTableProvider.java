@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.custom.HoneyBerryBushBlock;
+import net.kaupenjoe.tutorialmod.block.custom.RiceCropBlock;
 import net.kaupenjoe.tutorialmod.block.custom.StrawberryCropBlock;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.advancements.predicates.StatePropertiesPredicate;
@@ -79,6 +80,9 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
                         .apply(ApplyBonusCount.addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))))
         );
 
+        this.add(ModBlocks.RICE_CROP, this.createCropDrops(ModBlocks.RICE_CROP, ModItems.RICE_SHOOT, ModItems.RICE_SHOOT,
+                LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.RICE_CROP)
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE, RiceCropBlock.MAX_AGE))));
 
     }
 

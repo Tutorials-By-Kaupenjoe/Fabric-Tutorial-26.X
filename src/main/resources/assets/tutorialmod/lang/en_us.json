@@ -23,6 +23,7 @@
 
   "item.tutorialmod.strawberry_seeds": "Strawberry Seeds",
   "item.tutorialmod.honey_berries": "Honey Berries",
+  "item.tutorialmod.rice_shoot": "Rice Shoot",
 
 
   "block.tutorialmod.fluorite_block": "Block of Fluorite",
@@ -48,6 +49,8 @@
 
   "block.tutorialmod.strawberry_crop": "Strawberry Crop",
   "block.tutorialmod.honey_berry_bush": "Honey Berry Bush",
+  "block.tutorialmod.rice_crop": "Rice Crop",
+
 
 
   "painting.tutorialmod.world.title": "World",
