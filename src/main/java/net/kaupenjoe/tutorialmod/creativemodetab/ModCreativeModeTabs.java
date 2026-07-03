@@ -45,6 +45,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.HONEY_BERRIES);
                         output.accept(ModItems.RICE_SHOOT);
 
+                        output.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
+
 
                     }).build());
 

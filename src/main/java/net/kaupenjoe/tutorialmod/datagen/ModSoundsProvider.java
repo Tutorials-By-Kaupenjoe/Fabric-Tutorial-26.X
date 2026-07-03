@@ -19,6 +19,9 @@ public class ModSoundsProvider extends FabricSoundsProvider {
     protected void configure(HolderLookup.Provider registryLookup, SoundExporter exporter) {
         exporter.add(ModSounds.CHISEL_USE, SoundTypeBuilder.of(ModSounds.CHISEL_USE).subtitle("sounds.tutorialmod.chisel_use")
                 .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "chisel_use"))));
+
+        exporter.add(ModSounds.BAR_BRAWL, SoundTypeBuilder.of(ModSounds.BAR_BRAWL.value())
+                .sound(SoundTypeBuilder.RegistrationBuilder.ofFile(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "bar_brawl")).stream(true)));
     }
 
     @Override

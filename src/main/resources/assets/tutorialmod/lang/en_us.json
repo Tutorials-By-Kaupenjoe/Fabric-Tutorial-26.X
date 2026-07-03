@@ -25,6 +25,10 @@
   "item.tutorialmod.honey_berries": "Honey Berries",
   "item.tutorialmod.rice_shoot": "Rice Shoot",
 
+  "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+
+  "jukebox_song.tutorialmod.bar_brawl": "Bryan Tech - Bar Brawl (CC0)",
+
 
   "block.tutorialmod.fluorite_block": "Block of Fluorite",
   "block.tutorialmod.raw_fluorite_block": "Block of Raw Fluorite",
@@ -63,7 +67,7 @@
   "stat.tutorialmod.chisel_used": "Blocks Chiseled",
 
   "sounds.tutorialmod.chisel_use": "Using Chisel",
-
+  "subtitles.tutorialmod.bar_brawl": "Bar Brawl Playing",
 
   "creativemodetab.tutorialmod.fluorite_items": "Fluorite Tutorial Items",
   "creativemodetab.tutorialmod.fluorite_blocks": "Fluorite Tutorial Blocks",

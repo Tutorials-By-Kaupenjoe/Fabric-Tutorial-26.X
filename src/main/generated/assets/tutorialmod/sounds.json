@@ -1,4 +1,13 @@
 {
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "tutorialmod:bar_brawl",
+        "stream": true
+      }
+    ],
+    "subtitle": "subtitles.tutorialmod.bar_brawl"
+  },
   "chisel_use": {
     "sounds": [
       "tutorialmod:chisel_use"
