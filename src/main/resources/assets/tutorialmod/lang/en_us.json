@@ -62,6 +62,8 @@
 
   "stat.tutorialmod.chisel_used": "Blocks Chiseled",
 
+  "sounds.tutorialmod.chisel_use": "Using Chisel",
+
 
   "creativemodetab.tutorialmod.fluorite_items": "Fluorite Tutorial Items",
   "creativemodetab.tutorialmod.fluorite_blocks": "Fluorite Tutorial Blocks",

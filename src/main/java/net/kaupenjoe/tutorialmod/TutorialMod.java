@@ -8,6 +8,7 @@ import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.registries.ModCompostables;
 import net.kaupenjoe.tutorialmod.registries.ModFuels;
+import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,8 @@ public class TutorialMod implements ModInitializer {
 
 		ModDataComponents.registerDataComponents();
 		ModStats.registerStats();
+
+		ModSounds.registerSounds();
 
 
 		ModFuels.registerFuels();

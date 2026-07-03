@@ -19,6 +19,7 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModEquipmentAssetProvider::new);
 		pack.addProvider(ModRegistryDataProvider::new);
 		pack.addProvider(ModPaintingTagsProvider::new);
+		pack.addProvider(ModSoundsProvider::new);
 	}
 
 	@Override

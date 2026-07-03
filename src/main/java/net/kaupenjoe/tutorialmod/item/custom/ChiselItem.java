@@ -2,9 +2,11 @@ package net.kaupenjoe.tutorialmod.item.custom;
 
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
+import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -56,6 +58,8 @@ public class ChiselItem extends Item {
             // We are on the Server!
             level.setBlockAndUpdate(context.getClickedPos(), CHISEL_MAP.get(clickedBlock).defaultBlockState());
             context.getItemInHand().hurtAndBreak(1, context.getPlayer(), context.getHand());
+            level.playSound(null, context.getClickedPos(), ModSounds.CHISEL_USE, SoundSource.BLOCKS, 2.0F,
+                    0.8F + level.getRandom().nextFloat() * 0.4F);
 
             context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
             context.getPlayer().awardStat(ModStats.CHISEL_USED_STAT, 1);
