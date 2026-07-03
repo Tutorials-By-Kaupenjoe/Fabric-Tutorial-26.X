@@ -68,6 +68,9 @@ public class ModItems {
 
     public static final Item STRAWBERRY_SEEDS = registerItem("strawberry_seeds",
             properties -> new BlockItem(ModBlocks.STRAWBERRY_CROP, properties.useItemDescriptionPrefix()));
+    public static final Item HONEY_BERRIES = registerItem("honey_berries",
+            properties -> new BlockItem(ModBlocks.HONEY_BERRY_BUSH,
+                    properties.useItemDescriptionPrefix().food(ModFoods.HONEY_BERRIES)));
 
 
     public static ResourceKey<Item> getRK(Item item) {

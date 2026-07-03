@@ -1,10 +1,7 @@
 package net.kaupenjoe.tutorialmod.block;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
-import net.kaupenjoe.tutorialmod.block.custom.FluoriteLampBlock;
-import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
-import net.kaupenjoe.tutorialmod.block.custom.PedestalBlock;
-import net.kaupenjoe.tutorialmod.block.custom.StrawberryCropBlock;
+import net.kaupenjoe.tutorialmod.block.custom.*;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -93,6 +90,9 @@ public class ModBlocks {
 
     public static final Block STRAWBERRY_CROP = registerBlockWithoutBlockItem("strawberry_crop",
             properties -> new StrawberryCropBlock(properties.noCollision().randomTicks().instabreak().sound(SoundType.CROP)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final Block HONEY_BERRY_BUSH = registerBlockWithoutBlockItem("honey_berry_bush",
+            properties -> new HoneyBerryBushBlock(properties.randomTicks().noCollision().sound(SoundType.SWEET_BERRY_BUSH)
                     .pushReaction(PushReaction.DESTROY)));
 
 
