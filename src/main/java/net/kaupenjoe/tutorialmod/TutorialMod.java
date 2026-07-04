@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
+import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.registries.ModCompostables;
 import net.kaupenjoe.tutorialmod.registries.ModFuels;
@@ -29,7 +30,7 @@ public class TutorialMod implements ModInitializer {
 		ModStats.registerStats();
 
 		ModSounds.registerSounds();
-
+		ModEffects.registerEffects();
 
 		ModFuels.registerFuels();
 		ModCompostables.registerCompostables();

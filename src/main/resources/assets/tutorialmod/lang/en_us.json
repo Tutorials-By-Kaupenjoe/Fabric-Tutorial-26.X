@@ -64,6 +64,10 @@
   "painting.tutorialmod.saw_them.title": "Saw Them",
   "painting.tutorialmod.saw_them.author": "NanoAttack",
 
+  "effect.tutorialmod.stinky": "Stinky",
+  "effect.tutorialmod.stinky.description": "Causes entities around you to take damage",
+
+
   "stat.tutorialmod.chisel_used": "Blocks Chiseled",
 
   "sounds.tutorialmod.chisel_use": "Using Chisel",
