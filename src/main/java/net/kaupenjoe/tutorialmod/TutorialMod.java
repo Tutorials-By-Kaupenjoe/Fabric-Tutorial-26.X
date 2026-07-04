@@ -7,8 +7,10 @@ import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.registries.ModCompostables;
 import net.kaupenjoe.tutorialmod.registries.ModFuels;
+import net.kaupenjoe.tutorialmod.registries.ModPotionRecipes;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import org.slf4j.Logger;
@@ -32,8 +34,13 @@ public class TutorialMod implements ModInitializer {
 		ModSounds.registerSounds();
 		ModEffects.registerEffects();
 
+		ModPotions.registerPotions();
+
+
+
 		ModFuels.registerFuels();
 		ModCompostables.registerCompostables();
+		ModPotionRecipes.registerPotionRecipes();
 
 	}
 }

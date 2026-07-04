@@ -27,6 +27,12 @@
 
   "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
 
+
+  "item.minecraft.potion.effect.stinky_potion": "Stinky Potion",
+  "item.minecraft.splash_potion.effect.stinky_potion": "Stinky Splash Potion",
+  "item.minecraft.lingering_potion.effect.stinky_potion": "Stinky Lingering Potion",
+
+
   "jukebox_song.tutorialmod.bar_brawl": "Bryan Tech - Bar Brawl (CC0)",
 
 
