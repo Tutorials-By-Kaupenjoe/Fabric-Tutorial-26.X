@@ -35,6 +35,9 @@
 
   "jukebox_song.tutorialmod.bar_brawl": "Bryan Tech - Bar Brawl (CC0)",
 
+  "death.attack.stinky": "%s was stinkied to death!",
+  "death.attack.stinky.player": "%s was stinkied to death trying to outrun %s",
+
 
   "block.tutorialmod.fluorite_block": "Block of Fluorite",
   "block.tutorialmod.raw_fluorite_block": "Block of Raw Fluorite",
