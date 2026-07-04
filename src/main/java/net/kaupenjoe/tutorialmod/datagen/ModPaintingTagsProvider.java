@@ -20,6 +20,7 @@ public class ModPaintingTagsProvider extends FabricTagsProvider<PaintingVariant>
         getOrCreateRawBuilder(PaintingVariantTags.PLACEABLE)
                 .add(TagEntry.element(ModPaintings.SAW_THEM_KEY.identifier()))
                 .add(TagEntry.element(ModPaintings.SHRIMP_KEY.identifier()))
-                .add(TagEntry.element(ModPaintings.WORLD_KEY.identifier()));
+                .add(TagEntry.element(ModPaintings.WORLD_KEY.identifier()))
+                .add(TagEntry.element(ModPaintings.WANDERER_KEY.identifier()));
     }
 }

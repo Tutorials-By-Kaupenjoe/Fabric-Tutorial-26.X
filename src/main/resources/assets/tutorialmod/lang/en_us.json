@@ -26,6 +26,7 @@
   "item.tutorialmod.rice_shoot": "Rice Shoot",
 
   "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.tutorialmod.spectre_staff": "Spectre Staff",
 
 
   "item.minecraft.potion.effect.stinky_potion": "Stinky Potion",
@@ -72,6 +73,8 @@
   "painting.tutorialmod.shrimp.author": "NanoAttack",
   "painting.tutorialmod.saw_them.title": "Saw Them",
   "painting.tutorialmod.saw_them.author": "NanoAttack",
+  "painting.tutorialmod.wanderer.title": "Wanderer",
+  "painting.tutorialmod.wanderer.author": "PlatinumG17",
 
   "effect.tutorialmod.stinky": "Stinky",
   "effect.tutorialmod.stinky.description": "Causes entities around you to take damage",

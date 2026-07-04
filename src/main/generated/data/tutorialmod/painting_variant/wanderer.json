@@ -1,0 +1,13 @@
+{
+  "asset_id": "tutorialmod:wanderer",
+  "author": {
+    "color": "gray",
+    "translate": "painting.tutorialmod.wanderer.author"
+  },
+  "height": 2,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.tutorialmod.wanderer.title"
+  },
+  "width": 1
+}

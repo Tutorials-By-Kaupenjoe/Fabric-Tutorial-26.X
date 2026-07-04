@@ -111,5 +111,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.declareCustomModelItem(ModItems.SCULKBEAM_STAFF);
 
         itemModelGenerators.generateFlatItem(ModItems.BAR_BRAWL_MUSIC_DISC, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SPECTRE_STAFF, ModelTemplates.FLAT_HANDHELD_ITEM);
     }
 }
