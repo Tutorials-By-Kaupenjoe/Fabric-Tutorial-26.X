@@ -1,0 +1,57 @@
+{
+  "parent": "tutorialmod:tutorialmod/root",
+  "criteria": {
+    "berries": {
+      "conditions": {
+        "location": [
+          {
+            "block": "tutorialmod:honey_berry_bush",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "rice": {
+      "conditions": {
+        "location": [
+          {
+            "block": "tutorialmod:rice_crop",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "strawberry": {
+      "conditions": {
+        "location": [
+          {
+            "block": "tutorialmod:strawberry_crop",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.tutorialmod.plant_custom.description"
+    },
+    "icon": {
+      "id": "tutorialmod:rice_shoot"
+    },
+    "title": {
+      "translate": "advancements.tutorialmod.plant_custom.title"
+    }
+  },
+  "requirements": [
+    [
+      "berries",
+      "rice",
+      "strawberry"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

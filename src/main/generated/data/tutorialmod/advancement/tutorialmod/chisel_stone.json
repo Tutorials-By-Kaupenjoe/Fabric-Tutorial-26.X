@@ -1,0 +1,39 @@
+{
+  "parent": "tutorialmod:tutorialmod/root",
+  "criteria": {
+    "chisel_stone": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {}
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "tutorialmod:chisel"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.tutorialmod.chisel_stone.description"
+    },
+    "icon": {
+      "id": "tutorialmod:chisel"
+    },
+    "title": {
+      "translate": "advancements.tutorialmod.chisel_stone.title"
+    }
+  },
+  "requirements": [
+    [
+      "chisel_stone"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -91,7 +91,15 @@
   "tooltip.tutorialmod.chisel": "Press §eShift§r for more Information!",
   "tooltip.tutorialmod.chisel.shift_down": "Chisels Blocks into other Blocks",
   "tooltip.tutorialmod.strawberry": "This is delicious!",
-  "tooltip.tutorialmod.magic_block": "This block seems quite §2MAGICAL§r"
+  "tooltip.tutorialmod.magic_block": "This block seems quite §2MAGICAL§r",
 
 
+  "advancements.tutorialmod.root.title": "TutorialMod Advancements",
+  "advancements.tutorialmod.root.description": "TutorialMod Advancements Pretty Cool!",
+
+  "advancements.tutorialmod.plant_custom.title": "Plant a Custom Plant",
+  "advancements.tutorialmod.plant_custom.description": "Planting these custom plants is pretty neat!",
+
+  "advancements.tutorialmod.chisel_stone.title": "Chiseled in History!",
+  "advancements.tutorialmod.chisel_stone.description": "You used a chisel on Stone. Awesome!"
 }

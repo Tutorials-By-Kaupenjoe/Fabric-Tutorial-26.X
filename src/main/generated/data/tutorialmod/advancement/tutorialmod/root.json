@@ -1,0 +1,34 @@
+{
+  "criteria": {
+    "has_fluorite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tutorialmod:fluorite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "announce_to_chat": false,
+    "background": "minecraft:gui/advancements/backgrounds/adventure",
+    "description": {
+      "translate": "advancements.tutorialmod.root.description"
+    },
+    "icon": {
+      "id": "tutorialmod:fluorite"
+    },
+    "show_toast": false,
+    "title": {
+      "translate": "advancements.tutorialmod.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "has_fluorite"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
