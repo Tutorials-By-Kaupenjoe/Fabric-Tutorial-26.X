@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.datagen.villager;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -25,6 +26,15 @@ public class ModVillagerTrades {
 
     public static final ResourceKey<VillagerTrade> MASON_1_FLUORITE_CHISEL = createKey("mason/1/fluorite_chisel");
     public static final ResourceKey<VillagerTrade> LIBRARIAN_1_FLUORITE_ENCHANTED_BOOK = createKey("librarian/1/fluorite_enchanted_book");
+
+
+    public static final ResourceKey<VillagerTrade> KAUPENGER_1_EMERALD_FLUORITE = createKey("kaupenger/1/emerald_fluorite");
+    public static final ResourceKey<VillagerTrade> KAUPENGER_1_EMERALD_RAW_FLUORITE = createKey("kaupenger/1/emerald_raw_fluorite");
+
+    public static final ResourceKey<VillagerTrade> KAUPENGER_2_EMERALD_PEDESTAL = createKey("kaupenger/2/emerald_pedestal");
+    public static final ResourceKey<VillagerTrade> KAUPENGER_2_FLUORITE_SPECTRE_STAFF = createKey("kaupenger/2/fluorite_spectre_staff");
+
+
 
     public static void bootstrap(BootstrapContext<VillagerTrade> context) {
         var items = context.lookup(Registries.ITEM);
@@ -63,6 +73,28 @@ public class ModVillagerTrades {
                         HolderSet.direct(enchantments.getOrThrow(Enchantments.INFINITY),
                                 enchantments.getOrThrow(Enchantments.MULTISHOT)))));
 
+
+        context.register(KAUPENGER_1_EMERALD_FLUORITE, new VillagerTrade(
+                new TradeCost(Items.EMERALD, 6),
+                new ItemStackTemplate(ModItems.FLUORITE, 4),
+                12, 19, 0.05f,
+                Optional.empty(), List.of()));
+        context.register(KAUPENGER_1_EMERALD_RAW_FLUORITE, new VillagerTrade(
+                new TradeCost(Items.EMERALD, 5),
+                new ItemStackTemplate(ModItems.RAW_FLUORITE, 12),
+                12, 23, 0.05f,
+                Optional.empty(), List.of()));
+
+        context.register(KAUPENGER_2_EMERALD_PEDESTAL, new VillagerTrade(
+                new TradeCost(Items.EMERALD, 24),
+                new ItemStackTemplate(ModBlocks.PEDESTAL_BLOCK.asItem()),
+                12, 24, 0.05f,
+                Optional.empty(), List.of()));
+        context.register(KAUPENGER_2_FLUORITE_SPECTRE_STAFF, new VillagerTrade(
+                new TradeCost(ModItems.FLUORITE, 19),
+                new ItemStackTemplate(ModItems.SPECTRE_STAFF),
+                2, 19, 0.05f,
+                Optional.empty(), List.of()));
     }
 
 

@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.datagen.villager;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagEntry;
@@ -29,6 +30,13 @@ public class ModVillagerTradeTags extends FabricTagsProvider<VillagerTrade> {
 
         getOrCreateRawBuilder(VillagerTradeTags.LIBRARIAN_LEVEL_1)
                 .add(TagEntry.element(ModVillagerTrades.LIBRARIAN_1_FLUORITE_ENCHANTED_BOOK.identifier()));
+
+        getOrCreateRawBuilder(ModTags.Trades.KAUPENGER_LEVEL_1)
+                .add(TagEntry.element(ModVillagerTrades.KAUPENGER_1_EMERALD_FLUORITE.identifier()))
+                .add(TagEntry.element(ModVillagerTrades.KAUPENGER_1_EMERALD_RAW_FLUORITE.identifier()));
+        getOrCreateRawBuilder(ModTags.Trades.KAUPENGER_LEVEL_2)
+                .add(TagEntry.element(ModVillagerTrades.KAUPENGER_2_EMERALD_PEDESTAL.identifier()))
+                .add(TagEntry.element(ModVillagerTrades.KAUPENGER_2_FLUORITE_SPECTRE_STAFF.identifier()));
 
     }
 }

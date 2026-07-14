@@ -13,6 +13,7 @@ import net.kaupenjoe.tutorialmod.registries.ModFuels;
 import net.kaupenjoe.tutorialmod.registries.ModPotionRecipes;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
+import net.kaupenjoe.tutorialmod.villager.ModVillagers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,7 +36,7 @@ public class TutorialMod implements ModInitializer {
 		ModEffects.registerEffects();
 
 		ModPotions.registerPotions();
-
+		ModVillagers.register();
 
 
 		ModFuels.registerFuels();

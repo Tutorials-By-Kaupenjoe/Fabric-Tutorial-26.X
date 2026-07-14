@@ -1,0 +1,12 @@
+{
+  "gives": {
+    "id": "tutorialmod:spectre_staff"
+  },
+  "max_uses": 2.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 19.0,
+    "id": "tutorialmod:fluorite"
+  },
+  "xp": 19.0
+}
