@@ -1,0 +1,12 @@
+{
+  "gives": {
+    "id": "tutorialmod:chisel"
+  },
+  "max_uses": 2.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 6.0,
+    "id": "tutorialmod:fluorite"
+  },
+  "xp": 19.0
+}
