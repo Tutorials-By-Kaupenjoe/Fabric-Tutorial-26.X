@@ -18,6 +18,9 @@
 		"main": [
 			"net.kaupenjoe.tutorialmod.TutorialMod"
 		],
+		"client": [
+			"net.kaupenjoe.tutorialmod.TutorialModClient"
+		],
 		"fabric-datagen": [
 			"net.kaupenjoe.tutorialmod.TutorialModDataGenerator"
 		]
