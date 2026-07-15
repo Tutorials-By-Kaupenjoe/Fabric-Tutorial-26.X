@@ -7,6 +7,7 @@ import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.networking.ModPackets;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.registries.ModCompostables;
 import net.kaupenjoe.tutorialmod.registries.ModFuels;
@@ -38,6 +39,7 @@ public class TutorialMod implements ModInitializer {
 		ModPotions.registerPotions();
 		ModVillagers.register();
 
+		ModPackets.registerPackets();
 
 		ModFuels.registerFuels();
 		ModCompostables.registerCompostables();
