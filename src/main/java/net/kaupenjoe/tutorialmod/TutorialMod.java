@@ -2,11 +2,13 @@ package net.kaupenjoe.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.loot.ModLootTableModifiers;
 import net.kaupenjoe.tutorialmod.networking.ModPackets;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.registries.ModCompostables;
@@ -45,5 +47,6 @@ public class TutorialMod implements ModInitializer {
 		ModCompostables.registerCompostables();
 		ModPotionRecipes.registerPotionRecipes();
 
+		LootTableEvents.MODIFY.register(ModLootTableModifiers::modifyLootTables);
 	}
 }
