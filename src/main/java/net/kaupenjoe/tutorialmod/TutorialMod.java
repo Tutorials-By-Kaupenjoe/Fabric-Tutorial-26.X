@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
@@ -42,6 +43,8 @@ public class TutorialMod implements ModInitializer {
 		ModVillagers.register();
 
 		ModPackets.registerPackets();
+		ModBlockEntities.registerBlockEntities();
+
 
 		ModFuels.registerFuels();
 		ModCompostables.registerCompostables();
