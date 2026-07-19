@@ -1,18 +1,33 @@
 {
   "variants": {
-    "facing=east": {
+    "facing=east,lit=false": {
       "model": "tutorialmod:block/crystallizer",
       "y": 90
     },
-    "facing=north": {
+    "facing=east,lit=true": {
+      "model": "tutorialmod:block/crystallizer_on",
+      "y": 90
+    },
+    "facing=north,lit=false": {
       "model": "tutorialmod:block/crystallizer"
     },
-    "facing=south": {
+    "facing=north,lit=true": {
+      "model": "tutorialmod:block/crystallizer_on"
+    },
+    "facing=south,lit=false": {
       "model": "tutorialmod:block/crystallizer",
       "y": 180
     },
-    "facing=west": {
+    "facing=south,lit=true": {
+      "model": "tutorialmod:block/crystallizer_on",
+      "y": 180
+    },
+    "facing=west,lit=false": {
       "model": "tutorialmod:block/crystallizer",
+      "y": 270
+    },
+    "facing=west,lit=true": {
+      "model": "tutorialmod:block/crystallizer_on",
       "y": 270
     }
   }

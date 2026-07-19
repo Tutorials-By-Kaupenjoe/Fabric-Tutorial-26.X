@@ -1,5 +1,5 @@
 // 26.2	-999999999-01-01T00:00:00	Tutorial Mod/Model Definitions
-47942ed6e6ddb50fc131e764aa43635d70a5c867 assets/tutorialmod/blockstates/crystallizer.json
+8f8818bd55ce50d3fe571f04b4dbb77550b1f165 assets/tutorialmod/blockstates/crystallizer.json
 2a568c774bd47c66c989aa375efbb434012de0f2 assets/tutorialmod/blockstates/fluorite_block.json
 48534abaa08202fd704000b498d15db032626af0 assets/tutorialmod/blockstates/fluorite_button.json
 ccf29a4c548cf47abbebf147531799b1ce71c944 assets/tutorialmod/blockstates/fluorite_deepslate_ore.json
@@ -64,6 +64,7 @@ d6b54da31b4df9070aae2b6c2465d20031d2a832 assets/tutorialmod/items/spectre_staff.
 8ea9db75282c11ef4cda960b4676d97ea2db022e assets/tutorialmod/items/strawberry.json
 c980ab0436cc319420b26d08178142eab0c769c5 assets/tutorialmod/items/strawberry_seeds.json
 0065e510246f6a7754873826a47a6c7e9a6a3d16 assets/tutorialmod/models/block/crystallizer.json
+fff9f2678ca0ccc4e791a63552fdb65ad9307778 assets/tutorialmod/models/block/crystallizer_on.json
 b55e43776f1d0310bd46fe712a3108e00568002d assets/tutorialmod/models/block/fluorite_block.json
 546f5e0cddc980f094dd8ca07557ca951ed52ed0 assets/tutorialmod/models/block/fluorite_button.json
 1315c1d757931d2d3a8dac761cdde122147c5952 assets/tutorialmod/models/block/fluorite_button_inventory.json
