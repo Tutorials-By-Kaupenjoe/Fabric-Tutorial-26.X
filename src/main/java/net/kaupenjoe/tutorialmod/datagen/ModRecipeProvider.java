@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.datagen.recipe.CrystallizerRecipeBuilder;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
@@ -12,6 +13,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -187,6 +189,27 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(ModItems.FLUORITE), has(ModItems.FLUORITE))
                         .group("fluorite")
                         .save(output);
+
+
+                CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(ModItems.STRAWBERRY), ModItems.RICE_SHOOT, 2)
+                        .unlockedBy(getHasName(ModItems.STRAWBERRY), has(ModItems.STRAWBERRY))
+                        .save(output, "tutorialmod:rice_shoot_from_crystallizing");
+
+                CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(Items.STICK), Items.END_ROD, 2)
+                        .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                        .save(output, "tutorialmod:end_rod_from_crystallizing");
+
+                CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(ModItems.RAW_FLUORITE), ModItems.FLUORITE, 3)
+                        .unlockedBy(getHasName(ModItems.RAW_FLUORITE), has(ModItems.RAW_FLUORITE))
+                        .save(output, "tutorialmod:fluorite_from_crystallizing");
+
+                CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(Blocks.DIRT), Items.NETHER_STAR)
+                        .unlockedBy(getHasName(Blocks.DIRT), has(Blocks.DIRT))
+                        .save(output, "tutorialmod:nether_star_from_crystallizing");
+
+                CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(Items.REDSTONE), ModItems.BAR_BRAWL_MUSIC_DISC)
+                        .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                        .save(output, "tutorialmod:bar_brawl_music_disc_from_crystallizing");
 
 
             }

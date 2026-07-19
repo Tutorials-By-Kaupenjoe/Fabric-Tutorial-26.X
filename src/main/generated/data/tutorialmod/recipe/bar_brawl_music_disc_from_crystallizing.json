@@ -1,0 +1,7 @@
+{
+  "type": "tutorialmod:crystallizing",
+  "ingredient": "minecraft:redstone",
+  "result": {
+    "id": "tutorialmod:bar_brawl_music_disc"
+  }
+}
