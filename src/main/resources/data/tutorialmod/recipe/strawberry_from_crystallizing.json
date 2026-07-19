@@ -1,0 +1,8 @@
+{
+  "type": "tutorialmod:crystallizing",
+  "ingredient": "tutorialmod:strawberry",
+  "result": {
+    "count": 2,
+    "id": "tutorialmod:rice_shoot"
+  }
+}

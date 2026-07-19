@@ -13,6 +13,7 @@ import net.kaupenjoe.tutorialmod.loot.ModLootTableModifiers;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.networking.ModPackets;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
+import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
 import net.kaupenjoe.tutorialmod.registries.ModCompostables;
 import net.kaupenjoe.tutorialmod.registries.ModFuels;
 import net.kaupenjoe.tutorialmod.registries.ModPotionRecipes;
@@ -47,6 +48,7 @@ public class TutorialMod implements ModInitializer {
 		ModBlockEntities.registerBlockEntities();
 
 		ModMenuTypes.registerModMenuTypes();
+		ModRecipes.registerModRecipes();
 
 		ModFuels.registerFuels();
 		ModCompostables.registerCompostables();

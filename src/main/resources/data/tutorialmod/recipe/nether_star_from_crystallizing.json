@@ -1,0 +1,7 @@
+{
+  "type": "tutorialmod:crystallizing",
+  "ingredient": "minecraft:dirt",
+  "result": {
+    "id": "minecraft:nether_star"
+  }
+}

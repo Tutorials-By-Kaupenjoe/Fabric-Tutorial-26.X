@@ -1,0 +1,8 @@
+{
+  "type": "tutorialmod:crystallizing",
+  "ingredient": "tutorialmod:raw_fluorite",
+  "result": {
+    "count": 3,
+    "id": "tutorialmod:fluorite"
+  }
+}

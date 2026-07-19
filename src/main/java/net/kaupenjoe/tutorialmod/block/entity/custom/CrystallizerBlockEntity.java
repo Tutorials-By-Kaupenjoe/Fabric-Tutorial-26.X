@@ -6,6 +6,9 @@ import net.kaupenjoe.tutorialmod.block.entity.ImplementedInventory;
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerMenu;
+import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
+import net.kaupenjoe.tutorialmod.recipe.custom.CrystallizerRecipe;
+import net.kaupenjoe.tutorialmod.recipe.custom.CrystallizerRecipeInput;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
@@ -14,6 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.ContainerHelper;
 import net.minecraft.world.Containers;
@@ -23,12 +27,15 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import org.jspecify.annotations.Nullable;
+
+import java.util.Optional;
 
 public class CrystallizerBlockEntity extends BlockEntity implements ExtendedMenuProvider<BlockPos>, ImplementedInventory {
     public final NonNullList<ItemStack> inventory = NonNullList.withSize(2, ItemStack.EMPTY);
@@ -127,14 +134,21 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedMenu
     }
 
     private boolean hasRecipe() {
-        ItemStack output = new ItemStack(ModItems.FLUORITE);
-        Item input = ModItems.RAW_FLUORITE;
+        Optional<RecipeHolder<CrystallizerRecipe>> recipe = getCurrentRecipe();
+        if(recipe.isEmpty()) {
+            return false;
+        }
 
-        boolean hasCorrectInput = inventory.get(INPUT_SLOT).is(input);
+        ItemStack output = recipe.get().value().assemble(new CrystallizerRecipeInput(inventory.get(INPUT_SLOT)));
         boolean isItemOutputRight = canInsertItemIntoOutputSlot(output);
         boolean isAmountRight = canInsertAmountIntoOutputSlot(output.getCount());
 
-        return hasCorrectInput && isItemOutputRight && isAmountRight;
+        return isItemOutputRight && isAmountRight;
+    }
+
+    private Optional<RecipeHolder<CrystallizerRecipe>> getCurrentRecipe() {
+        return ((ServerLevel) level).recipeAccess()
+                .getRecipeFor(ModRecipes.CRYSTALLIZER_TYPE, new CrystallizerRecipeInput(inventory.get(INPUT_SLOT)), level);
     }
 
     private boolean canInsertAmountIntoOutputSlot(int count) {
@@ -149,9 +163,9 @@ public class CrystallizerBlockEntity extends BlockEntity implements ExtendedMenu
                 inventory.get(OUTPUT_SLOT).is(output.getItem());
     }
 
-
     private void craftItem() {
-        ItemStack output = new ItemStack(ModItems.FLUORITE);
+        Optional<RecipeHolder<CrystallizerRecipe>> recipe = getCurrentRecipe();
+        ItemStack output = recipe.get().value().assemble(new CrystallizerRecipeInput(inventory.get(INPUT_SLOT)));
 
         inventory.set(INPUT_SLOT, inventory.get(INPUT_SLOT).copyWithCount(inventory.get(INPUT_SLOT).getCount() - 1));
         inventory.set(OUTPUT_SLOT, output.copyWithCount(inventory.get(OUTPUT_SLOT).getCount() + output.getCount()));
