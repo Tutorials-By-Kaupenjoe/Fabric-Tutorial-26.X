@@ -10,6 +10,7 @@ import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.loot.ModLootTableModifiers;
+import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.networking.ModPackets;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.registries.ModCompostables;
@@ -45,6 +46,7 @@ public class TutorialMod implements ModInitializer {
 		ModPackets.registerPackets();
 		ModBlockEntities.registerBlockEntities();
 
+		ModMenuTypes.registerModMenuTypes();
 
 		ModFuels.registerFuels();
 		ModCompostables.registerCompostables();
