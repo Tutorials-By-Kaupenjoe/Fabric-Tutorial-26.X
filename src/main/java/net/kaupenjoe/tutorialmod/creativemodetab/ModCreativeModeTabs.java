@@ -77,6 +77,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.FLUORITE_LAMP);
                         output.accept(ModBlocks.PEDESTAL_BLOCK);
+                        output.accept(ModBlocks.CRYSTALLIZER);
 
 
                     }).build());

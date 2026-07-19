@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.block.entity;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.block.entity.custom.CrystallizerBlockEntity;
 import net.kaupenjoe.tutorialmod.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -13,6 +14,10 @@ public class ModBlockEntities {
     public static final BlockEntityType<PedestalBlockEntity> PEDESTAL_BE =
             Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "pedestal_be"),
                     FabricBlockEntityTypeBuilder.create(PedestalBlockEntity::new, ModBlocks.PEDESTAL_BLOCK).build());
+
+    public static final BlockEntityType<CrystallizerBlockEntity> CRYSTALLIZER_BE =
+            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "crystallizer_be"),
+                    FabricBlockEntityTypeBuilder.create(CrystallizerBlockEntity::new, ModBlocks.CRYSTALLIZER).build());
 
 
     public static void registerBlockEntities() {

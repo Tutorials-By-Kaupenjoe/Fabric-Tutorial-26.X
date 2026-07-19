@@ -1,0 +1,7 @@
+// 26.2	-999999999-01-01T00:00:00	Tutorial Mod/Tags for minecraft:villager_trade
+fa6264ba3de001c31118c881d66958348b33a10c data/minecraft/tags/villager_trade/farmer/level_1.json
+ffe3071cba3fe213630952e2953530a4bef22331 data/minecraft/tags/villager_trade/farmer/level_2.json
+fc673227bf65f9fe869f9cb8bdd8b34178cd5f69 data/minecraft/tags/villager_trade/librarian/level_1.json
+63648306af3e0e54be188fbe2b89090e3ca103a1 data/minecraft/tags/villager_trade/mason/level_1.json
+7d23895eb3cf3b1e32d2e899c67ddd3100f89e89 data/tutorialmod/tags/villager_trade/kaupenger/level_1.json
+332846f57f29043dcc5a534f6a324d7b4ac665d7 data/tutorialmod/tags/villager_trade/kaupenger/level_2.json

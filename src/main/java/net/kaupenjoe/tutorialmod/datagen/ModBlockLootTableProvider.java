@@ -60,6 +60,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
 
         dropSelf(ModBlocks.FLUORITE_LAMP);
         dropSelf(ModBlocks.PEDESTAL_BLOCK);
+        dropSelf(ModBlocks.CRYSTALLIZER);
 
         this.add(ModBlocks.STRAWBERRY_CROP, this.createCropDrops(ModBlocks.STRAWBERRY_CROP, ModItems.STRAWBERRY, ModItems.STRAWBERRY_SEEDS,
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.STRAWBERRY_CROP)

@@ -70,6 +70,7 @@ public class ModModelProvider extends FabricModelProvider {
                 HoneyBerryBushBlock.AGE, 0, 1, 2, 3);
         blockModelGenerators.createCropBlock(ModBlocks.RICE_CROP, RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 
+        blockModelGenerators.createHorizontallyRotatedBlock(ModBlocks.CRYSTALLIZER, TexturedModel.ORIENTABLE);
     }
 
     @Override

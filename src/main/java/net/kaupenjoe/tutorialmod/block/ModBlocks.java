@@ -98,6 +98,10 @@ public class ModBlocks {
             properties -> new RiceCropBlock(properties.noCollision().randomTicks().instabreak().sound(SoundType.CROP)
                     .pushReaction(PushReaction.DESTROY)));
 
+    public static final Block CRYSTALLIZER = registerBlock("crystallizer",
+            properties -> new CrystallizerBlock(properties.strength(3f).requiresCorrectToolForDrops()));
+
+
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();
     }

@@ -1,0 +1,14 @@
+// 26.2	-999999999-01-01T00:00:00	Tutorial Mod/Tags for minecraft:item
+9d7e20278499ad8c61d28514ea379378d0f650f6 data/minecraft/tags/item/axes.json
+00df68ad445025fb72f90523a34c216c02913aa6 data/minecraft/tags/item/chest_armor.json
+526ec127a145db02975e7ec564384fa0a5389523 data/minecraft/tags/item/creeper_drop_music_discs.json
+7d94ac012f7023ba65ba42ee0f94d70164cd437f data/minecraft/tags/item/enchantable/bow.json
+53cb3c6d8a362ae4f40babcc8793aac2ba15d59e data/minecraft/tags/item/foot_armor.json
+b6cac0199f04efaab89eef33f16228f9ff8b196a data/minecraft/tags/item/head_armor.json
+b3da0597552a7e770662ca131e0c3ef28f95b596 data/minecraft/tags/item/hoes.json
+fbacf4c35ba8ec6403ef2347135efc7f9bdb41a3 data/minecraft/tags/item/leg_armor.json
+8b79806d1e1d1bff7cf9fb74a9229d5cc3ecad30 data/minecraft/tags/item/pickaxes.json
+d757f88c8dab61f8df078fa381dcb263152fd30d data/minecraft/tags/item/shovels.json
+600dfb1844085bb1c832154b4e17b2f11dc5a2a6 data/minecraft/tags/item/spears.json
+60e1fcd86b0d0a05a5494e406de9fba133e6ace7 data/minecraft/tags/item/swords.json
+021a6231d4588a3f4d5ff725464f03ddfed5fdf5 data/tutorialmod/tags/item/transformable_items.json

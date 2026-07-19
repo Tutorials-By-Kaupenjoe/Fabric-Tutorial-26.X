@@ -31,7 +31,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.FLUORITE_WALL))
                 .add(ModBlocks.getRK(ModBlocks.FLUORITE_DOOR))
                 .add(ModBlocks.getRK(ModBlocks.FLUORITE_TRAPDOOR))
-                .add(ModBlocks.getRK(ModBlocks.PEDESTAL_BLOCK));
+                .add(ModBlocks.getRK(ModBlocks.PEDESTAL_BLOCK))
+                .add(ModBlocks.getRK(ModBlocks.CRYSTALLIZER));
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.getRK(ModBlocks.FLUORITE_DEEPSLATE_ORE));

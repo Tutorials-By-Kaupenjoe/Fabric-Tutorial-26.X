@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.menu;
 
 import net.fabricmc.fabric.api.menu.v1.ExtendedMenuType;
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerMenu;
 import net.kaupenjoe.tutorialmod.menu.custom.PedestalMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Registry;
@@ -13,6 +14,10 @@ public class ModMenuTypes {
     public static final MenuType<PedestalMenu> PEDESTAL_MENU =
             Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "pedestal_menu"),
                     new ExtendedMenuType<>(PedestalMenu::new, BlockPos.STREAM_CODEC));
+
+    public static final MenuType<CrystallizerMenu> CRYSTALLIZER_MENU =
+            Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "crystallizer_menu"),
+                    new ExtendedMenuType<>(CrystallizerMenu::new, BlockPos.STREAM_CODEC));
 
 
     public static void registerModMenuTypes() {

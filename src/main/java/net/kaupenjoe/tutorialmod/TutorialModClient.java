@@ -7,6 +7,7 @@ import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
+import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerScreen;
 import net.kaupenjoe.tutorialmod.menu.custom.PedestalScreen;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPayloadC2S;
 import net.minecraft.client.Minecraft;
@@ -24,6 +25,7 @@ public class TutorialModClient implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(TutorialModClient::onEndTick);
 
         MenuScreens.register(ModMenuTypes.PEDESTAL_MENU, PedestalScreen::new);
+        MenuScreens.register(ModMenuTypes.CRYSTALLIZER_MENU, CrystallizerScreen::new);
     }
 
     public static void onEndTick(Minecraft client) {
