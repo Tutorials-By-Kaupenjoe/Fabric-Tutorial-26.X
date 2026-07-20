@@ -23,6 +23,12 @@
 		],
 		"fabric-datagen": [
 			"net.kaupenjoe.tutorialmod.TutorialModDataGenerator"
+		],
+		"rei_client": [
+			"net.kaupenjoe.tutorialmod.compat.TutorialModREIClient"
+		],
+		"rei_common": [
+			"net.kaupenjoe.tutorialmod.compat.TutorialModREICommon"
 		]
 	},
 	"mixins": [
