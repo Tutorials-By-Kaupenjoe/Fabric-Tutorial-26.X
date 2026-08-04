@@ -20,6 +20,7 @@ import net.kaupenjoe.tutorialmod.registries.ModPotionRecipes;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
+import net.kaupenjoe.tutorialmod.worldgen.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,6 +50,10 @@ public class TutorialMod implements ModInitializer {
 
 		ModMenuTypes.registerModMenuTypes();
 		ModRecipes.registerModRecipes();
+
+
+		ModWorldGeneration.generateModWorldGen();
+
 
 		ModFuels.registerFuels();
 		ModCompostables.registerCompostables();
