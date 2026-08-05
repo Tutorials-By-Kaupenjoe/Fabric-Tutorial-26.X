@@ -22,5 +22,8 @@ public class ModWorldGeneration {
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.PLAINS, Biomes.MEADOW, Biomes.STONY_PEAKS, Biomes.STONY_SHORE),
                 GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.BALSA_PLACED_KEY);
+
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.PLAINS, Biomes.MEADOW, Biomes.FOREST, Biomes.BIRCH_FOREST),
+                GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.HONEY_BERRY_BUSH_PLACED_KEY);
     }
 }
