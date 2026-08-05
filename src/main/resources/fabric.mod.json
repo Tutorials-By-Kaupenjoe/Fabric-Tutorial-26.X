@@ -34,6 +34,7 @@
 	"mixins": [
 		"tutorialmod.mixins.json"
 	],
+	"accessWidener": "tutorialmod.classtweaker",
 	"depends": {
 		"fabricloader": ">=0.19.2",
 		"minecraft": "~26.2",
