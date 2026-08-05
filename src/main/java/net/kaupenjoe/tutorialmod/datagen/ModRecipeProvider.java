@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.datagen.recipe.CrystallizerRecipeBuilder;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -211,6 +212,9 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
                         .save(output, "tutorialmod:bar_brawl_music_disc_from_crystallizing");
 
+                woodFromLogs(ModBlocks.BALSA_WOOD, ModBlocks.BALSA_LOG);
+                woodFromLogs(ModBlocks.STRIPPED_BALSA_WOOD, ModBlocks.STRIPPED_BALSA_LOG);
+                planksFromLogs(ModBlocks.BALSA_PLANKS, ModTags.Items.BALSA_LOGS, 4);
 
             }
         };

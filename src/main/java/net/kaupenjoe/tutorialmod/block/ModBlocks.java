@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.block;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.custom.*;
 import net.minecraft.core.Registry;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -100,6 +101,31 @@ public class ModBlocks {
 
     public static final Block CRYSTALLIZER = registerBlock("crystallizer",
             properties -> new CrystallizerBlock(properties.strength(3f).requiresCorrectToolForDrops()));
+
+    public static final Block BALSA_LOG = registerBlock("balsa_log",
+            properties -> new RotatedPillarBlock(properties.strength(2f).instrument(NoteBlockInstrument.BASS)
+                    .sound(SoundType.WOOD).ignitedByLava()));
+    public static final Block BALSA_WOOD = registerBlock("balsa_wood",
+            properties -> new RotatedPillarBlock(properties.strength(2f).instrument(NoteBlockInstrument.BASS)
+                    .sound(SoundType.WOOD).ignitedByLava()));
+    public static final Block STRIPPED_BALSA_LOG = registerBlock("stripped_balsa_log",
+            properties -> new RotatedPillarBlock(properties.strength(2f).instrument(NoteBlockInstrument.BASS)
+                    .sound(SoundType.WOOD).ignitedByLava()));
+    public static final Block STRIPPED_BALSA_WOOD = registerBlock("stripped_balsa_wood",
+            properties -> new RotatedPillarBlock(properties.strength(2f).instrument(NoteBlockInstrument.BASS)
+                    .sound(SoundType.WOOD).ignitedByLava()));
+
+    public static final Block BALSA_PLANKS = registerBlock("balsa_planks",
+            properties -> new Block(properties
+                    .mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()));
+    public static final Block BALSA_LEAVES = registerBlock("balsa_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.01f, ParticleTypes.CHERRY_LEAVES, properties
+                    .mapColor(MapColor.PLANT).strength(0.2F).randomTicks().sound(SoundType.AZALEA_LEAVES)
+                    .noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).isSuffocating(Blocks::never)
+                    .isViewBlocking(Blocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(Blocks::never)));
+
+
 
 
     public static ResourceKey<Block> getRK(Block block) {

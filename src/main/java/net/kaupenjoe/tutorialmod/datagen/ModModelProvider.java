@@ -71,6 +71,13 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createCropBlock(ModBlocks.RICE_CROP, RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 
         blockModelGenerators.createFurnace(ModBlocks.CRYSTALLIZER, TexturedModel.ORIENTABLE);
+
+        blockModelGenerators.woodProvider(ModBlocks.BALSA_LOG).log(ModBlocks.BALSA_LOG).wood(ModBlocks.BALSA_WOOD);
+        blockModelGenerators.woodProvider(ModBlocks.STRIPPED_BALSA_LOG).log(ModBlocks.STRIPPED_BALSA_LOG).wood(ModBlocks.STRIPPED_BALSA_WOOD);
+
+        blockModelGenerators.createTrivialCube(ModBlocks.BALSA_PLANKS);
+        blockModelGenerators.createTrivialBlock(ModBlocks.BALSA_LEAVES, TexturedModel.LEAVES);
+
     }
 
     @Override

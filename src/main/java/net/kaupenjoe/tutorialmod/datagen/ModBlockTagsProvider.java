@@ -63,6 +63,19 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
         tag(BlockTags.CROPS)
                 .add(ModBlocks.getRK(ModBlocks.STRAWBERRY_CROP));
 
+        tag(ModTags.Blocks.BALSA_LOGS)
+                .add(ModBlocks.getRK(ModBlocks.BALSA_LOG))
+                .add(ModBlocks.getRK(ModBlocks.BALSA_WOOD))
+                .add(ModBlocks.getRK(ModBlocks.STRIPPED_BALSA_LOG))
+                .add(ModBlocks.getRK(ModBlocks.STRIPPED_BALSA_WOOD));
 
+        tag(BlockTags.LOGS)
+                .addTag(ModTags.Blocks.BALSA_LOGS);
+
+        tag(BlockTags.PLANKS)
+                .add(ModBlocks.getRK(ModBlocks.BALSA_PLANKS));
+
+        tag(BlockTags.LEAVES)
+                .add(ModBlocks.getRK(ModBlocks.BALSA_LEAVES));
     }
 }

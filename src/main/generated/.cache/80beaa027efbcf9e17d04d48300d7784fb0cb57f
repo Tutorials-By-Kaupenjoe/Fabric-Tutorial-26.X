@@ -4,13 +4,17 @@ af81c6a1615e814f15ed8b1226ac6f25cd6be4e6 data/minecraft/tags/block/buttons.json
 8b21129069f1ac9ac16b52da3381ca127cf969dc data/minecraft/tags/block/doors.json
 b96af12f0816fed2734564c13c429281c4307c79 data/minecraft/tags/block/fence_gates.json
 9268cd5b22bc00db499526376630c97dcdf9f42b data/minecraft/tags/block/fences.json
+d3ce8e7370e94ff508085e40482ed386dbd29f1c data/minecraft/tags/block/leaves.json
+55d826edf66720ab21b70fe688cb21d598b1c489 data/minecraft/tags/block/logs.json
 8c9ce01ceaa198f0262e4a7e430b45107a529b27 data/minecraft/tags/block/mineable/pickaxe.json
 91c0c7b996f2a4ec93bb3f508eb6a3d47ceb963a data/minecraft/tags/block/needs_diamond_tool.json
 09b69dd749a4b48f17e7f17cf83683a85fe74baa data/minecraft/tags/block/needs_iron_tool.json
+5c6708099b2a23842920dfe05ef23a5aeb5b2370 data/minecraft/tags/block/planks.json
 efb6bf783ae4b91c349cfc97684ce81ec32b07c9 data/minecraft/tags/block/pressure_plates.json
 8c019b47136a16371ef04386ae13da3973127027 data/minecraft/tags/block/slabs.json
 3dc421f3f81f32add48f38406a1626f63f9669d3 data/minecraft/tags/block/stairs.json
 a57b1c7242906614c9b11700650889a0f35c6054 data/minecraft/tags/block/trapdoors.json
 0d1f452be27f38eb1f96dee1ba12db3b118807ba data/minecraft/tags/block/walls.json
+d8b534b7d592190656e55bb670f6120fb559188b data/tutorialmod/tags/block/balsa_logs.json
 a249c46329a41538f49a564e1f14338aaf1be5a0 data/tutorialmod/tags/block/incorrect_for_fluorite_tool.json
 c07c4c3be2f1e2228e70cca883d68ce9bd7ba47e data/tutorialmod/tags/block/needs_fluorite_tool.json

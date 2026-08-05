@@ -79,6 +79,14 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PEDESTAL_BLOCK);
                         output.accept(ModBlocks.CRYSTALLIZER);
 
+                        output.accept(ModBlocks.BALSA_LOG);
+                        output.accept(ModBlocks.BALSA_WOOD);
+                        output.accept(ModBlocks.STRIPPED_BALSA_LOG);
+                        output.accept(ModBlocks.STRIPPED_BALSA_WOOD);
+
+                        output.accept(ModBlocks.BALSA_PLANKS);
+                        output.accept(ModBlocks.BALSA_LEAVES);
+
 
                     }).build());
 

@@ -67,6 +67,12 @@
   "block.tutorialmod.honey_berry_bush": "Honey Berry Bush",
   "block.tutorialmod.rice_crop": "Rice Crop",
 
+  "block.tutorialmod.balsa_log": "Balsa Log",
+  "block.tutorialmod.balsa_wood": "Balsa Wood",
+  "block.tutorialmod.stripped_balsa_log": "Stripped Balsa Log",
+  "block.tutorialmod.stripped_balsa_wood": "Stripped Balsa Wood",
+  "block.tutorialmod.balsa_planks": "Balsa Planks",
+  "block.tutorialmod.balsa_leaves": "Balsa Leaves",
 
 
   "painting.tutorialmod.world.title": "World",

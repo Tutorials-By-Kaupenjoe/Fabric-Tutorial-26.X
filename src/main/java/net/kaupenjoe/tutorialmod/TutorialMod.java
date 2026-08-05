@@ -14,9 +14,7 @@ import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.networking.ModPackets;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
-import net.kaupenjoe.tutorialmod.registries.ModCompostables;
-import net.kaupenjoe.tutorialmod.registries.ModFuels;
-import net.kaupenjoe.tutorialmod.registries.ModPotionRecipes;
+import net.kaupenjoe.tutorialmod.registries.*;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
@@ -58,6 +56,8 @@ public class TutorialMod implements ModInitializer {
 		ModFuels.registerFuels();
 		ModCompostables.registerCompostables();
 		ModPotionRecipes.registerPotionRecipes();
+		ModFlammableBlocks.registerFlammableBlocks();
+		ModStrippableBlocks.registerStrippableBlocks();
 
 		LootTableEvents.MODIFY.register(ModLootTableModifiers::modifyLootTables);
 	}

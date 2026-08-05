@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricPackOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
+import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -39,6 +40,21 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.getRK(ModItems.KAUPEN_BOW));
 
         tag(ItemTags.CREEPER_DROP_MUSIC_DISCS).add(ModItems.getRK(ModItems.BAR_BRAWL_MUSIC_DISC));
+
+        tag(ModTags.Items.BALSA_LOGS)
+                .add(ModItems.getRK(ModBlocks.BALSA_LOG.asItem()))
+                .add(ModItems.getRK(ModBlocks.BALSA_WOOD.asItem()))
+                .add(ModItems.getRK(ModBlocks.STRIPPED_BALSA_LOG.asItem()))
+                .add(ModItems.getRK(ModBlocks.STRIPPED_BALSA_WOOD.asItem()));
+
+        tag(ItemTags.LOGS_THAT_BURN)
+                .addTag(ModTags.Items.BALSA_LOGS);
+
+        tag(ItemTags.PLANKS)
+                .add(ModItems.getRK(ModBlocks.BALSA_PLANKS.asItem()));
+
+        tag(ItemTags.LEAVES)
+                .add(ModItems.getRK(ModBlocks.BALSA_LEAVES.asItem()));
 
     }
 }

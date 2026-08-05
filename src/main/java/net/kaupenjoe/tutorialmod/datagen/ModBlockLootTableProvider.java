@@ -85,6 +85,16 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
                 LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.RICE_CROP)
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE, RiceCropBlock.MAX_AGE))));
 
+
+        dropSelf(ModBlocks.BALSA_LOG);
+        dropSelf(ModBlocks.BALSA_WOOD);
+        dropSelf(ModBlocks.STRIPPED_BALSA_LOG);
+        dropSelf(ModBlocks.STRIPPED_BALSA_WOOD);
+        dropSelf(ModBlocks.BALSA_PLANKS);
+        // NOTE: This should drop the Sapling instead!
+        add(ModBlocks.BALSA_LEAVES, block -> createLeavesDrops(block, ModBlocks.BALSA_LEAVES, NORMAL_LEAVES_SAPLING_CHANCES));
+
+
     }
 
     public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {
