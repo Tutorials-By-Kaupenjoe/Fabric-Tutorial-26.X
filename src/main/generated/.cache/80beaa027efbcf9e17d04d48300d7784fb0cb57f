@@ -4,6 +4,7 @@ af81c6a1615e814f15ed8b1226ac6f25cd6be4e6 data/minecraft/tags/block/buttons.json
 8b21129069f1ac9ac16b52da3381ca127cf969dc data/minecraft/tags/block/doors.json
 b96af12f0816fed2734564c13c429281c4307c79 data/minecraft/tags/block/fence_gates.json
 9268cd5b22bc00db499526376630c97dcdf9f42b data/minecraft/tags/block/fences.json
+d86010b9ebd7690b0c88c9169bf170224fe168c2 data/minecraft/tags/block/flower_pots.json
 d3ce8e7370e94ff508085e40482ed386dbd29f1c data/minecraft/tags/block/leaves.json
 55d826edf66720ab21b70fe688cb21d598b1c489 data/minecraft/tags/block/logs.json
 8c9ce01ceaa198f0262e4a7e430b45107a529b27 data/minecraft/tags/block/mineable/pickaxe.json

@@ -1,7 +1,8 @@
 // 26.2	-999999999-01-01T00:00:00	Tutorial Mod/Block Loot Tables
-d5bf21a93c00d480f09bd7281e468e2f7573c5ae data/tutorialmod/loot_table/blocks/balsa_leaves.json
+10049efffcd1f02501c0ef51d3b706e68dbec96b data/tutorialmod/loot_table/blocks/balsa_leaves.json
 c72e4e554e077418c5531ab0884d1eb43d1d2314 data/tutorialmod/loot_table/blocks/balsa_log.json
 27cbd89508407f9d7b02431b002fd6f53adb5422 data/tutorialmod/loot_table/blocks/balsa_planks.json
+bc3fabe1fd174ccc0f1a7c25fa881677e206cc7a data/tutorialmod/loot_table/blocks/balsa_sapling.json
 34847477a60a509636cfd2579ce85ae7a3a7971f data/tutorialmod/loot_table/blocks/balsa_wood.json
 d9472353b7c7816787642fbb1de9232cef946d14 data/tutorialmod/loot_table/blocks/crystallizer.json
 1a62cf52312569b737493d3ad2cfe3b8e49f203d data/tutorialmod/loot_table/blocks/fluorite_block.json
@@ -22,6 +23,7 @@ aa7e5f2776fb880f9a565014f78ae22567b4ccd2 data/tutorialmod/loot_table/blocks/fluo
 568062e57223ef08cbb2e20d61ed06e93a307ed4 data/tutorialmod/loot_table/blocks/honey_berry_bush.json
 2d9bed7047c1a4ada75161cd0b226c0f4225b0a3 data/tutorialmod/loot_table/blocks/magic_block.json
 7c60636e3816d76d5190182420bc2980dc0e2d77 data/tutorialmod/loot_table/blocks/pedestal.json
+29ced49426bb0622ca62a46baa136b159a3c14da data/tutorialmod/loot_table/blocks/potted_balsa_sapling.json
 16b0ca60d221dced0b45dc98a8638772cb801670 data/tutorialmod/loot_table/blocks/raw_fluorite_block.json
 f42f5b7ed3959f76532437420bf820c56f8a289c data/tutorialmod/loot_table/blocks/rice_crop.json
 fa079db44981c2146d255387068ba786c6a58262 data/tutorialmod/loot_table/blocks/strawberry_crop.json

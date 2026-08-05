@@ -77,5 +77,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
 
         tag(BlockTags.LEAVES)
                 .add(ModBlocks.getRK(ModBlocks.BALSA_LEAVES));
+
+        tag(BlockTags.FLOWER_POTS)
+                .add(ModBlocks.getRK(ModBlocks.POTTED_BALSA_SAPLING));
     }
 }

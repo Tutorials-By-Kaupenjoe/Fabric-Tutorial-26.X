@@ -87,6 +87,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BALSA_PLANKS);
                         output.accept(ModBlocks.BALSA_LEAVES);
 
+                        output.accept(ModBlocks.BALSA_SAPLING);
+
 
                     }).build());
 

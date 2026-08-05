@@ -92,8 +92,9 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.STRIPPED_BALSA_WOOD);
         dropSelf(ModBlocks.BALSA_PLANKS);
         // NOTE: This should drop the Sapling instead!
-        add(ModBlocks.BALSA_LEAVES, block -> createLeavesDrops(block, ModBlocks.BALSA_LEAVES, NORMAL_LEAVES_SAPLING_CHANCES));
-
+        add(ModBlocks.BALSA_LEAVES, block -> createLeavesDrops(block, ModBlocks.BALSA_SAPLING, NORMAL_LEAVES_SAPLING_CHANCES));
+        dropSelf(ModBlocks.BALSA_SAPLING);
+        add(ModBlocks.POTTED_BALSA_SAPLING, block -> createPotFlowerItemTable(ModBlocks.BALSA_SAPLING));
 
     }
 

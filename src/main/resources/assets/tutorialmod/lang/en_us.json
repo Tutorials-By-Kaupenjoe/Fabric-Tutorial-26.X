@@ -74,6 +74,9 @@
   "block.tutorialmod.balsa_planks": "Balsa Planks",
   "block.tutorialmod.balsa_leaves": "Balsa Leaves",
 
+  "block.tutorialmod.balsa_sapling": "Balsa Sapling",
+  "block.tutorialmod.potted_balsa_sapling": "Potted Balsa Sapling",
+
 
   "painting.tutorialmod.world.title": "World",
   "painting.tutorialmod.world.author": "NanoAttack",

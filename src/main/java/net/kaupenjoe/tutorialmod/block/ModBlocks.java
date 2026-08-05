@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.block;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.custom.*;
+import net.kaupenjoe.tutorialmod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -125,7 +126,13 @@ public class ModBlocks {
                     .noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).isSuffocating(Blocks::never)
                     .isViewBlocking(Blocks::never).ignitedByLava().pushReaction(PushReaction.DESTROY).isRedstoneConductor(Blocks::never)));
 
-
+    public static final Block BALSA_SAPLING = registerBlock("balsa_sapling",
+            properties -> new SaplingBlock(ModTreeGrowers.BALSA, properties
+                    .mapColor(MapColor.PLANT).noCollision().randomTicks().instabreak()
+                    .sound(SoundType.GRASS).pushReaction(PushReaction.DESTROY)));
+    public static final Block POTTED_BALSA_SAPLING = registerBlockWithoutBlockItem("potted_balsa_sapling",
+            properties -> new FlowerPotBlock(BALSA_SAPLING, properties
+                    .instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
 
 
     public static ResourceKey<Block> getRK(Block block) {

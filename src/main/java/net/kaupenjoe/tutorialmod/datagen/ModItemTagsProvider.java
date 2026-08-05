@@ -56,5 +56,8 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.LEAVES)
                 .add(ModItems.getRK(ModBlocks.BALSA_LEAVES.asItem()));
 
+        tag(ItemTags.SAPLINGS)
+                .add(ModItems.getRK(ModBlocks.BALSA_SAPLING.asItem()));
+
     }
 }

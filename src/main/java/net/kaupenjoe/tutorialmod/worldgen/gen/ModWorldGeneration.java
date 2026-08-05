@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.worldgen.gen;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.kaupenjoe.tutorialmod.worldgen.ModPlacedFeatures;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
 public class ModWorldGeneration {
@@ -19,6 +20,7 @@ public class ModWorldGeneration {
         // BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.DEEP_OCEAN, Biomes.BADLANDS),
         //         GenerationStep.Decoration.UNDERGROUND_ORES, ModPlacedFeatures.OVERWORLD_FLUORITE_ORE_PLACED_KEY);
 
-
+        BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.PLAINS, Biomes.MEADOW, Biomes.STONY_PEAKS, Biomes.STONY_SHORE),
+                GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.BALSA_PLACED_KEY);
     }
 }

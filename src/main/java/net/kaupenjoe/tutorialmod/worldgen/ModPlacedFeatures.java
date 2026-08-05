@@ -1,10 +1,13 @@
 package net.kaupenjoe.tutorialmod.worldgen;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.placement.OrePlacements;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
+import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
@@ -23,6 +26,8 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> NETHER_FLUORITE_ORE_PLACED_KEY = registerKey("nether_fluorite_ore_placed");
     public static final ResourceKey<PlacedFeature> END_FLUORITE_ORE_PLACED_KEY = registerKey("end_fluorite_ore_placed");
 
+    public static final ResourceKey<PlacedFeature> BALSA_PLACED_KEY = registerKey("balsa_placed");
+
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
@@ -35,6 +40,10 @@ public class ModPlacedFeatures {
         register(context, END_FLUORITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_FLUORITE_ORE_KEY),
                 OrePlacements.commonOrePlacement(12,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(100))));
+
+        register(context, BALSA_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.BALSA_KEY),
+                VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
+                        ModBlocks.BALSA_SAPLING));
     }
 
     private static ResourceKey<PlacedFeature> registerKey(String name) {
