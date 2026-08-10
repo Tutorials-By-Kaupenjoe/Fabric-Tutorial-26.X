@@ -19,6 +19,7 @@ import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
 import net.kaupenjoe.tutorialmod.worldgen.gen.ModWorldGeneration;
+import net.kaupenjoe.tutorialmod.worldgen.tree.ModFoliagePlacerTypes;
 import net.kaupenjoe.tutorialmod.worldgen.tree.ModTrunkPlacerTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,6 +52,7 @@ public class TutorialMod implements ModInitializer {
 		ModRecipes.registerModRecipes();
 
 		ModTrunkPlacerTypes.registerModTrunkPlacerTypes();
+		ModFoliagePlacerTypes.registerModFoliagePlacerTypes();
 
 
 		ModWorldGeneration.generateModWorldGen();
