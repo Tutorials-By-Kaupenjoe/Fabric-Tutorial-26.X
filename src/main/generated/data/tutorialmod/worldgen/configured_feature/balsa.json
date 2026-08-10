@@ -31,12 +31,10 @@
       "upper_size": 2
     },
     "trunk_placer": {
-      "type": "minecraft:bending_trunk_placer",
+      "type": "tutorialmod:spiral_trunk_placer",
       "base_height": 3,
-      "bend_length": 5,
       "height_rand_a": 3,
-      "height_rand_b": 4,
-      "min_height_for_leaves": 2
+      "height_rand_b": 4
     },
     "trunk_provider": {
       "type": "minecraft:simple_state_provider",

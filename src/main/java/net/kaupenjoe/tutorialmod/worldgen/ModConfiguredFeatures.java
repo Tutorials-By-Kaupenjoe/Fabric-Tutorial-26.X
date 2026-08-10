@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.worldgen;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.worldgen.tree.SpiralTrunkPlacer;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -58,7 +59,8 @@ public class ModConfiguredFeatures {
 
         register(context, BALSA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.BALSA_LOG),
-                new BendingTrunkPlacer(3, 3, 4, 2, ConstantInt.of(5)),
+                new SpiralTrunkPlacer(3, 3, 4),
+                // new BendingTrunkPlacer(3, 3, 4, 2, ConstantInt.of(5)),
 
                 BlockStateProvider.simple(ModBlocks.BALSA_LEAVES),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
