@@ -88,6 +88,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.BALSA_LEAVES);
 
                         output.accept(ModBlocks.BALSA_SAPLING);
+                        output.accept(ModBlocks.KAUPEN_PORTAL);
 
 
                     }).build());

@@ -96,6 +96,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.BALSA_SAPLING);
         add(ModBlocks.POTTED_BALSA_SAPLING, block -> createPotFlowerItemTable(ModBlocks.BALSA_SAPLING));
 
+        dropSelf(ModBlocks.KAUPEN_PORTAL);
     }
 
     public LootTable.Builder createMultipleOreDrops(final Block block, Item item, float minDrops, float maxDrops) {

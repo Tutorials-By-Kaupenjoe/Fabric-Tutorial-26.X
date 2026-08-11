@@ -1,5 +1,7 @@
 // 26.2	-999999999-01-01T00:00:00	Tutorial Mod/TutorialMod Data Provider
 9ef89a7ecd1b361c7900616e47e85cb9f487e025 data/tutorialmod/damage_type/stinky.json
+6d6922501e85f35764e1b3699eba134fe54e587f data/tutorialmod/dimension/kaupendim.json
+f091541b7f6d5c0b33acc6c957a45eecf5c67518 data/tutorialmod/dimension_type/kaupendim_type.json
 a237eef9c44bb29a83e9414b051e6af191bc36e6 data/tutorialmod/jukebox_song/bar_brawl.json
 d1c58072b0fb14f5f9140693de3337043bd4f455 data/tutorialmod/painting_variant/saw_them.json
 cf6d7212b9f86c564eb6bba56e1c9b392437e697 data/tutorialmod/painting_variant/shrimp.json

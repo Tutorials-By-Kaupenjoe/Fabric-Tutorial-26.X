@@ -9,6 +9,7 @@ import net.kaupenjoe.tutorialmod.datagen.villager.ModVillagerTradeTags;
 import net.kaupenjoe.tutorialmod.datagen.villager.ModVillagerTrades;
 import net.kaupenjoe.tutorialmod.worldgen.ModConfiguredFeatures;
 import net.kaupenjoe.tutorialmod.worldgen.ModPlacedFeatures;
+import net.kaupenjoe.tutorialmod.worldgen.dimension.ModDimensions;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 
@@ -42,5 +43,8 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 
 		registryBuilder.add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap);
 		registryBuilder.add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+
+		registryBuilder.add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
+		registryBuilder.add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType);
 	}
 }
