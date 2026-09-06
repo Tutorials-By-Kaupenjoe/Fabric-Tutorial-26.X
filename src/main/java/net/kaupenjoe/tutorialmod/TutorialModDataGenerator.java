@@ -30,6 +30,7 @@ public class TutorialModDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModAdvancementsProvider::new);
 		pack.addProvider(ModVillagerTradeTags::new);
 		pack.addProvider(ModPOITags::new);
+		pack.addProvider(ModEntityLootTableProvider::new);
 	}
 
 	@Override
