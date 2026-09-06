@@ -28,6 +28,7 @@
   "item.tutorialmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
   "item.tutorialmod.spectre_staff": "Spectre Staff",
 
+  "item.tutorialmod.capybara_spawn_egg": "Capybara Spawn Egg",
 
   "item.minecraft.potion.effect.stinky_potion": "Stinky Potion",
   "item.minecraft.splash_potion.effect.stinky_potion": "Stinky Splash Potion",
@@ -93,6 +94,9 @@
   "effect.tutorialmod.stinky.description": "Causes entities around you to take damage",
 
   "entity.minecraft.villager.tutorialmod.kaupenger": "Kaupenger",
+
+  "entity.tutorialmod.capybara": "Capybara",
+
 
   "stat.tutorialmod.chisel_used": "Blocks Chiseled",
 

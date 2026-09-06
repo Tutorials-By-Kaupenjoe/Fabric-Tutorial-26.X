@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.datagen.ModJukeboxSongs;
+import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.food.ModFoods;
 import net.kaupenjoe.tutorialmod.item.custom.ChiselItem;
 import net.minecraft.core.Registry;
@@ -80,6 +81,9 @@ public class ModItems {
 
     public static final Item SPECTRE_STAFF = registerItem("spectre_staff",
             properties -> new Item(properties.stacksTo(1)));
+
+    public static final Item CAPYBARA_SPAWN_EGG = registerItem("capybara_spawn_egg",
+            properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.CAPYBARA)));
 
 
     public static ResourceKey<Item> getRK(Item item) {

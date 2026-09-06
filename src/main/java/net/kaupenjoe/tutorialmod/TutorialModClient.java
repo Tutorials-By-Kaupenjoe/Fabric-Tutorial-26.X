@@ -3,8 +3,13 @@ package net.kaupenjoe.tutorialmod;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
+import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
+import net.kaupenjoe.tutorialmod.entity.ModEntities;
+import net.kaupenjoe.tutorialmod.entity.client.CapybaraModel;
+import net.kaupenjoe.tutorialmod.entity.client.CapybaraRenderer;
+import net.kaupenjoe.tutorialmod.entity.client.ModModelLayerLocations;
 import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerScreen;
@@ -13,6 +18,7 @@ import net.kaupenjoe.tutorialmod.networking.packet.TestPayloadC2S;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.network.chat.Component;
 
 public class TutorialModClient implements ClientModInitializer {
@@ -26,6 +32,10 @@ public class TutorialModClient implements ClientModInitializer {
 
         MenuScreens.register(ModMenuTypes.PEDESTAL_MENU, PedestalScreen::new);
         MenuScreens.register(ModMenuTypes.CRYSTALLIZER_MENU, CrystallizerScreen::new);
+
+        ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.CAPYBARA, CapybaraModel::createBodyLayer);
+        EntityRenderers.register(ModEntities.CAPYBARA, CapybaraRenderer::new);
+
     }
 
     public static void onEndTick(Minecraft client) {
