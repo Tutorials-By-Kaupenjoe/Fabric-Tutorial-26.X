@@ -2,7 +2,9 @@ package net.kaupenjoe.tutorialmod.worldgen.gen;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.worldgen.ModPlacedFeatures;
+import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 
@@ -25,5 +27,8 @@ public class ModWorldGeneration {
 
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(Biomes.PLAINS, Biomes.MEADOW, Biomes.FOREST, Biomes.BIRCH_FOREST),
                 GenerationStep.Decoration.VEGETAL_DECORATION, ModPlacedFeatures.HONEY_BERRY_BUSH_PLACED_KEY);
+
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(Biomes.MEADOW, Biomes.PLAINS, Biomes.FOREST), MobCategory.CREATURE,
+                ModEntities.CAPYBARA, 15, 3, 5);
     }
 }

@@ -1,5 +1,6 @@
 package net.kaupenjoe.tutorialmod;
 
+import dev.architectury.registry.level.entity.SpawnPlacementsRegistry;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
@@ -24,6 +25,9 @@ import net.kaupenjoe.tutorialmod.villager.ModVillagers;
 import net.kaupenjoe.tutorialmod.worldgen.gen.ModWorldGeneration;
 import net.kaupenjoe.tutorialmod.worldgen.tree.ModFoliagePlacerTypes;
 import net.kaupenjoe.tutorialmod.worldgen.tree.ModTrunkPlacerTypes;
+import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.level.levelgen.Heightmap;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -72,5 +76,8 @@ public class TutorialMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.CAPYBARA, CapybaraEntity.createAttributes());
 
 		LootTableEvents.MODIFY.register(ModLootTableModifiers::modifyLootTables);
+
+		SpawnPlacementsRegistry.register(() -> ModEntities.CAPYBARA, SpawnPlacementTypes.ON_GROUND,
+				Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, Animal::checkAnimalSpawnRules);
 	}
 }
