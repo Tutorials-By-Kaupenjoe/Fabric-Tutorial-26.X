@@ -49,6 +49,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SPECTRE_STAFF);
 
                         output.accept(ModItems.CAPYBARA_SPAWN_EGG);
+                        output.accept(ModItems.WARTURTLE_SPAWN_EGG);
 
 
                     }).build());

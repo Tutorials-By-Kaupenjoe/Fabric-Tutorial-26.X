@@ -7,4 +7,6 @@ import net.minecraft.resources.Identifier;
 public class ModModelLayerLocations {
     public static final ModelLayerLocation CAPYBARA =
             new ModelLayerLocation(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "capybara"), "main");
+    public static final ModelLayerLocation WARTURTLE =
+            new ModelLayerLocation(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "warturtle"), "main");
 }

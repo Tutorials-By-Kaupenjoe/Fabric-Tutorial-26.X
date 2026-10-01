@@ -10,6 +10,7 @@ import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.entity.custom.CapybaraEntity;
+import net.kaupenjoe.tutorialmod.entity.custom.WarturtleEntity;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.loot.ModLootTableModifiers;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
@@ -70,6 +71,7 @@ public class TutorialMod implements ModInitializer {
 		ModStrippableBlocks.registerStrippableBlocks();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.CAPYBARA, CapybaraEntity.createAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.WARTURTLE, WarturtleEntity.createAttributes());
 
 		LootTableEvents.MODIFY.register(ModLootTableModifiers::modifyLootTables);
 

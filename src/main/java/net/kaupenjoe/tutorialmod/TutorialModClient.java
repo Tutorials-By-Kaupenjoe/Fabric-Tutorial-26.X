@@ -7,9 +7,7 @@ import net.fabricmc.fabric.api.client.rendering.v1.ModelLayerRegistry;
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.kaupenjoe.tutorialmod.entity.ModEntities;
-import net.kaupenjoe.tutorialmod.entity.client.CapybaraModel;
-import net.kaupenjoe.tutorialmod.entity.client.CapybaraRenderer;
-import net.kaupenjoe.tutorialmod.entity.client.ModModelLayerLocations;
+import net.kaupenjoe.tutorialmod.entity.client.*;
 import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerScreen;
@@ -35,6 +33,9 @@ public class TutorialModClient implements ClientModInitializer {
 
         ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.CAPYBARA, CapybaraModel::createBodyLayer);
         EntityRenderers.register(ModEntities.CAPYBARA, CapybaraRenderer::new);
+
+        ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.WARTURTLE, WarturtleModel::createBodyLayer);
+        EntityRenderers.register(ModEntities.WARTURTLE, WarturtleRenderer::new);
 
     }
 

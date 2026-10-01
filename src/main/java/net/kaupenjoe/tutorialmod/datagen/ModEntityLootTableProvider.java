@@ -31,5 +31,6 @@ public class ModEntityLootTableProvider extends FabricEntityLootSubProvider {
                                 .apply(EnchantedCountIncreaseFunction.lootingMultiplier(enchantments, ContextFloatProviders.between(1.0F, 2.0F)))
                         ).when(LootItemKilledByPlayerCondition.killedByPlayer())));
 
+        this.add(ModEntities.WARTURTLE, LootTable.lootTable());
     }
 }

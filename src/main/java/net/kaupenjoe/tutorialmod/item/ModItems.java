@@ -87,6 +87,8 @@ public class ModItems {
 
     public static final Item CAPYBARA_SPAWN_EGG = registerItem("capybara_spawn_egg",
             properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.CAPYBARA)));
+    public static final Item WARTURTLE_SPAWN_EGG = registerItem("warturtle_spawn_egg",
+            properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.WARTURTLE)));
 
 
     public static ResourceKey<Item> getRK(Item item) {

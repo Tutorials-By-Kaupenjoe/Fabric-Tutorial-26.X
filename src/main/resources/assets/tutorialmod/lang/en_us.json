@@ -29,10 +29,12 @@
   "item.tutorialmod.spectre_staff": "Spectre Staff",
 
   "item.tutorialmod.capybara_spawn_egg": "Capybara Spawn Egg",
+  "item.tutorialmod.warturtle_spawn_egg": "Warturtle Spawn Egg",
 
   "item.minecraft.potion.effect.stinky_potion": "Stinky Potion",
   "item.minecraft.splash_potion.effect.stinky_potion": "Stinky Splash Potion",
   "item.minecraft.lingering_potion.effect.stinky_potion": "Stinky Lingering Potion",
+
 
 
   "jukebox_song.tutorialmod.bar_brawl": "Bryan Tech - Bar Brawl (CC0)",
@@ -96,6 +98,7 @@
   "entity.minecraft.villager.tutorialmod.kaupenger": "Kaupenger",
 
   "entity.tutorialmod.capybara": "Capybara",
+  "entity.tutorialmod.warturtle": "Warturtle",
 
 
   "stat.tutorialmod.chisel_used": "Blocks Chiseled",
