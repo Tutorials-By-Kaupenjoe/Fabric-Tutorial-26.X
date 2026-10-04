@@ -39,6 +39,8 @@ public class TutorialModClient implements ClientModInitializer {
         ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.WARTURTLE, WarturtleModel::createBodyLayer);
         EntityRenderers.register(ModEntities.WARTURTLE, WarturtleRenderer::new);
 
+        ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.WARTURTLE_ARMOR, WarturtleModel::createBodyLayer);
+
     }
 
     public static void onEndTick(Minecraft client) {

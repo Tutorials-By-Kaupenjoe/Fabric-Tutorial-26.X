@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.menu.custom;
 
 import net.kaupenjoe.tutorialmod.entity.custom.WarturtleEntity;
+import net.kaupenjoe.tutorialmod.item.custom.WarturtleArmorItem;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
@@ -34,7 +35,13 @@ public class WarturtleMenu extends AbstractContainerMenu {
         this.warturtle = warturtleEntity;
         warturtleContainer.startOpen(inventory.player);
 
-        this.addSlot(new Slot(warturtleContainer, 0, 8, 63));
+        // Armor Slot
+        this.addSlot(new Slot(warturtleContainer, 0, 8, 63) {
+            @Override
+            public boolean mayPlace(ItemStack itemStack) {
+                return itemStack.getItem() instanceof WarturtleArmorItem;
+            }
+        });
         this.addSlot(new Slot(warturtleContainer, 1, 44, 63));
 
         // Chest Slots

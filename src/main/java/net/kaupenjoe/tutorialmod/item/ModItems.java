@@ -7,6 +7,7 @@ import net.kaupenjoe.tutorialmod.datagen.ModJukeboxSongs;
 import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.food.ModFoods;
 import net.kaupenjoe.tutorialmod.item.custom.ChiselItem;
+import net.kaupenjoe.tutorialmod.item.custom.WarturtleArmorItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -89,6 +90,17 @@ public class ModItems {
             properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.CAPYBARA)));
     public static final Item WARTURTLE_SPAWN_EGG = registerItem("warturtle_spawn_egg",
             properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.WARTURTLE)));
+
+    public static final Item IRON_WARTURTLE_ARMOR = registerItem("iron_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(200)));
+    public static final Item GOLD_WARTURTLE_ARMOR = registerItem("gold_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(400)));
+    public static final Item DIAMOND_WARTURTLE_ARMOR = registerItem("diamond_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(600)));
+    public static final Item NETHERITE_WARTURTLE_ARMOR = registerItem("netherite_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(800)));
+    public static final Item FLUORITE_WARTURTLE_ARMOR = registerItem("fluorite_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(1000)));
 
 
     public static ResourceKey<Item> getRK(Item item) {

@@ -35,6 +35,11 @@
   "item.minecraft.splash_potion.effect.stinky_potion": "Stinky Splash Potion",
   "item.minecraft.lingering_potion.effect.stinky_potion": "Stinky Lingering Potion",
 
+  "item.tutorialmod.iron_warturtle_armor": "Iron Warturtle Armor",
+  "item.tutorialmod.gold_warturtle_armor": "Gold Warturtle Armor",
+  "item.tutorialmod.diamond_warturtle_armor": "Diamond Warturtle Armor",
+  "item.tutorialmod.netherite_warturtle_armor": "Netherite Warturtle Armor",
+  "item.tutorialmod.fluorite_warturtle_armor": "Fluorite Warturtle Armor",
 
 
   "jukebox_song.tutorialmod.bar_brawl": "Bryan Tech - Bar Brawl (CC0)",

@@ -12,6 +12,7 @@ import net.minecraft.resources.Identifier;
 public class WarturtleRenderer extends MobRenderer<WarturtleEntity, WarturtleRenderState, WarturtleModel> {
     public WarturtleRenderer(EntityRendererProvider.Context context) {
         super(context, new WarturtleModel(context.bakeLayer(ModModelLayerLocations.WARTURTLE)), 0.9f);
+        this.addLayer(new WarturtleArmorFeatureRenderer(this, context.getModelSet()));
     }
 
     @Override
@@ -46,5 +47,7 @@ public class WarturtleRenderer extends MobRenderer<WarturtleEntity, WarturtleRen
         state.hasChestTier1 = entity.hasTier1Chest();
         state.hasChestTier2 = entity.hasTier2Chest();
         state.hasChestTier3 = entity.hasTier3Chest();
+
+        state.bodyArmorItem = entity.getBodyArmorItem();
     }
 }

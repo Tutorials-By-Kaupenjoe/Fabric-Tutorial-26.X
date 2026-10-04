@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.menu.v1.ExtendedMenuProvider;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.item.custom.WarturtleArmorItem;
 import net.kaupenjoe.tutorialmod.menu.custom.WarturtleMenu;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
@@ -12,7 +13,10 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.*;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -303,6 +307,13 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
             setChest(TIER_3_CHEST_SLOT, false);
             dropChestInventory(TIER_3_CHEST_SLOT);
         }
+
+        if(container.getSlot(0).getItem().getItem() instanceof WarturtleArmorItem) {
+            setBodyArmorItem(container.getSlot(0).getItem());
+        }
+        if(container.getSlot(0).getItem().isEmpty() && isWearingBodyArmor()) {
+            setBodyArmorItem(ItemStack.EMPTY);
+        }
     }
 
     @Override
@@ -409,6 +420,39 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
                 }
             });
         }
+    }
+
+    /* ARMOR */
+    public boolean hasArmorOn() {
+        return isWearingBodyArmor();
+    }
+
+    @Override
+    public boolean isWearingBodyArmor() {
+        return this.inventory.getItem(0).getItem() instanceof WarturtleArmorItem;
+    }
+
+    @Override
+    protected void actuallyHurt(ServerLevel level, DamageSource damageSource, float damageAmount) {
+        if (!this.canArmorAbsorb(damageSource)) {
+            super.actuallyHurt(level, damageSource, damageAmount);
+        } else {
+            ItemStack itemstack = this.getBodyArmorItem();
+            itemstack.hurtAndBreak(Mth.ceil(damageAmount), this, EquipmentSlot.BODY);
+
+            if(itemstack.getItem() instanceof WarturtleArmorItem warturtleArmorItem) {
+                int damagereducton = 3; // warturtleArmorItem.getDefense() / 2; // depends on what armor
+                super.actuallyHurt(level, damageSource, Math.max(0, damageAmount - damagereducton));
+            }
+        }
+    }
+
+    private boolean canArmorAbsorb(DamageSource damageSource) {
+        return this.hasArmorOn() && !damageSource.is(DamageTypeTags.BYPASSES_WOLF_ARMOR);
+    }
+
+    private void setBodyArmorItem(ItemStack item) {
+        this.setItemSlot(EquipmentSlot.BODY, item);
     }
 }
 
