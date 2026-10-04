@@ -26,11 +26,14 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.ContainerListener;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.WoolCarpetBlock;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
@@ -55,6 +58,9 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
             SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.BOOLEAN);
     public static final EntityDataAccessor<Boolean> HAS_TIER_3_CHEST =
             SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.BOOLEAN);
+
+    public static final EntityDataAccessor<ItemStack> DYE_STACK =
+            SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.ITEM_STACK);
 
     protected SimpleContainer inventory;
 
@@ -165,6 +171,8 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
         entityData.define(HAS_TIER_1_CHEST, false);
         entityData.define(HAS_TIER_2_CHEST, false);
         entityData.define(HAS_TIER_3_CHEST, false);
+
+        entityData.define(DYE_STACK, ItemStack.EMPTY);
     }
 
     @Override
@@ -207,6 +215,8 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
         if(inventory.getItem(TIER_3_CHEST_SLOT).is(Items.CHEST) && !hasTier3Chest()) {
             setChest(TIER_3_CHEST_SLOT, true);
         }
+
+        this.entityData.set(DYE_STACK, inventory.getItem(1));
     }
 
     public void toggleSitting() {
@@ -313,6 +323,13 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
         }
         if(container.getSlot(0).getItem().isEmpty() && isWearingBodyArmor()) {
             setBodyArmorItem(ItemStack.EMPTY);
+        }
+
+        if(!container.getSlot(1).getItem().isEmpty()) {
+            this.entityData.set(DYE_STACK, container.getSlot(1).getItem());
+        }
+        if(container.getSlot(1).getItem().isEmpty()) {
+            this.entityData.set(DYE_STACK, ItemStack.EMPTY);
         }
     }
 
@@ -453,6 +470,18 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
 
     private void setBodyArmorItem(ItemStack item) {
         this.setItemSlot(EquipmentSlot.BODY, item);
+    }
+
+    // Dyeable
+    @Nullable
+    private static DyeColor getDyeColor(ItemStack stack) {
+        Block block = Block.byItem(stack.getItem());
+        return block instanceof WoolCarpetBlock ? ((WoolCarpetBlock)block).getColor() : null;
+    }
+
+    @Nullable
+    public DyeColor getSwag() {
+        return getDyeColor(this.entityData.get(DYE_STACK));
     }
 }
 

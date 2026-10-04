@@ -42,7 +42,13 @@ public class WarturtleMenu extends AbstractContainerMenu {
                 return itemStack.getItem() instanceof WarturtleArmorItem;
             }
         });
-        this.addSlot(new Slot(warturtleContainer, 1, 44, 63));
+        // Dye Slot
+        this.addSlot(new Slot(warturtleContainer, 1, 44, 63) {
+            @Override
+            public boolean mayPlace(ItemStack itemStack) {
+                return warturtleEntity.hasArmorOn();
+            }
+        });
 
         // Chest Slots
 
