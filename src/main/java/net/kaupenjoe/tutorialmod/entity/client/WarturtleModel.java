@@ -116,6 +116,10 @@ public class WarturtleModel extends EntityModel<WarturtleRenderState> {
         hidingAnimation.apply(state.hidingAnimationState, state.ageInTicks);
         emergeAnimation.apply(state.emergeAnimationState, state.ageInTicks);
         sittingAnimation.apply(state.sittingAnimationState, state.ageInTicks);
+
+        tier1.visible = state.hasChestTier1;
+        tier2.visible = state.hasChestTier2;
+        tier3.visible = state.hasChestTier3;
     }
 
     private void applyHeadRotation(float headYaw, float headPitch) {
