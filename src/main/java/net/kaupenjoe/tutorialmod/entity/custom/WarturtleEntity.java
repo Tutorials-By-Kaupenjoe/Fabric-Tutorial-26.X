@@ -1,20 +1,27 @@
 package net.kaupenjoe.tutorialmod.entity.custom;
 
+import net.fabricmc.fabric.api.menu.v1.ExtendedMenuProvider;
+import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.menu.custom.WarturtleMenu;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
+import net.minecraft.world.*;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.ContainerListener;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -25,7 +32,9 @@ import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import org.jspecify.annotations.Nullable;
 
-public class WarturtleEntity extends TamableAnimal {
+import java.util.UUID;
+
+public class WarturtleEntity extends TamableAnimal implements ContainerListener, HasCustomInventoryScreen {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
@@ -36,8 +45,22 @@ public class WarturtleEntity extends TamableAnimal {
     public static final EntityDataAccessor<Long> LAST_POSE_TICK =
             SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.LONG);
 
+    public static final EntityDataAccessor<Boolean> HAS_TIER_1_CHEST =
+            SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.BOOLEAN);
+    public static final EntityDataAccessor<Boolean> HAS_TIER_2_CHEST =
+            SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.BOOLEAN);
+    public static final EntityDataAccessor<Boolean> HAS_TIER_3_CHEST =
+            SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.BOOLEAN);
+
+    protected SimpleContainer inventory;
+
+    private final int TIER_1_CHEST_SLOT = 2;
+    private final int TIER_2_CHEST_SLOT = 3;
+    private final int TIER_3_CHEST_SLOT = 4;
+
     public WarturtleEntity(EntityType<? extends TamableAnimal> type, Level level) {
         super(type, level);
+        this.createInventory();
     }
 
     @Override
@@ -134,12 +157,25 @@ public class WarturtleEntity extends TamableAnimal {
     protected void defineSynchedData(SynchedEntityData.Builder entityData) {
         super.defineSynchedData(entityData);
         entityData.define(LAST_POSE_TICK, 0L);
+
+        entityData.define(HAS_TIER_1_CHEST, false);
+        entityData.define(HAS_TIER_2_CHEST, false);
+        entityData.define(HAS_TIER_3_CHEST, false);
     }
 
     @Override
     protected void addAdditionalSaveData(ValueOutput output) {
         super.addAdditionalSaveData(output);
         output.putLong("LastPoseTick", this.entityData.get(LAST_POSE_TICK));
+
+        ValueOutput.TypedOutputList<ItemStackWithSlot> items = output.list("Items", ItemStackWithSlot.CODEC);
+
+        for (int i = 0; i < this.inventory.getContainerSize(); i++) {
+            ItemStack stack = this.inventory.getItem(i);
+            if (!stack.isEmpty()) {
+                items.add(new ItemStackWithSlot(i, stack));
+            }
+        }
     }
 
     @Override
@@ -150,6 +186,23 @@ public class WarturtleEntity extends TamableAnimal {
             this.setPose(Pose.SITTING);
         }
         this.setLastPoseTick(l);
+
+        this.createInventory();
+        for (ItemStackWithSlot item : input.listOrEmpty("Items", ItemStackWithSlot.CODEC)) {
+            if (item.isValidInContainer(this.inventory.getContainerSize())) {
+                this.inventory.setItem(item.slot(), item.stack());
+            }
+        }
+
+        if(inventory.getItem(TIER_1_CHEST_SLOT).is(Items.CHEST) && !hasTier1Chest()) {
+            setChest(TIER_1_CHEST_SLOT, true);
+        }
+        if(inventory.getItem(TIER_2_CHEST_SLOT).is(Items.CHEST) && !hasTier2Chest()) {
+            setChest(TIER_2_CHEST_SLOT, true);
+        }
+        if(inventory.getItem(TIER_3_CHEST_SLOT).is(Items.CHEST) && !hasTier3Chest()) {
+            setChest(TIER_3_CHEST_SLOT, true);
+        }
     }
 
     public void toggleSitting() {
@@ -214,12 +267,148 @@ public class WarturtleEntity extends TamableAnimal {
             return InteractionResult.SUCCESS;
         }
 
-        if(isTame() && hand == InteractionHand.MAIN_HAND && !isFood(itemStack)) {
+        if(isTame() && hand == InteractionHand.MAIN_HAND && !isFood(itemStack) && !player.isSecondaryUseActive()) {
             toggleSitting();
+            return InteractionResult.SUCCESS;
+        } else if(this.isTame()) {
+            this.openCustomInventoryScreen(player);
             return InteractionResult.SUCCESS;
         }
 
         return super.mobInteract(player, hand);
+    }
+
+    /* INVENTORY */
+    @Override
+    public void slotChanged(AbstractContainerMenu container, int slotIndex, ItemStack itemStack) {
+        if(container.getSlot(TIER_1_CHEST_SLOT).getItem().is(Items.CHEST) && !hasTier1Chest()) {
+            setChest(TIER_1_CHEST_SLOT, true);
+        }
+        if(container.getSlot(TIER_2_CHEST_SLOT).getItem().is(Items.CHEST) && !hasTier2Chest()) {
+            setChest(TIER_2_CHEST_SLOT, true);
+        }
+        if(container.getSlot(TIER_3_CHEST_SLOT).getItem().is(Items.CHEST) && !hasTier3Chest()) {
+            setChest(TIER_3_CHEST_SLOT, true);
+        }
+
+        if(!container.getSlot(TIER_1_CHEST_SLOT).getItem().is(Items.CHEST) && hasTier1Chest()) {
+            setChest(TIER_1_CHEST_SLOT, false);
+            dropChestInventory(TIER_1_CHEST_SLOT);
+        }
+        if(!container.getSlot(TIER_2_CHEST_SLOT).getItem().is(Items.CHEST) && hasTier2Chest()) {
+            setChest(TIER_2_CHEST_SLOT, false);
+            dropChestInventory(TIER_2_CHEST_SLOT);
+        }
+        if(!container.getSlot(TIER_3_CHEST_SLOT).getItem().is(Items.CHEST) && hasTier3Chest()) {
+            setChest(TIER_3_CHEST_SLOT, false);
+            dropChestInventory(TIER_3_CHEST_SLOT);
+        }
+    }
+
+    @Override
+    public void dataChanged(AbstractContainerMenu container, int id, int value) {
+
+    }
+
+    private void dropChestInventory(int slot) {
+        if(slot == TIER_1_CHEST_SLOT) {
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(5, 64));
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(6, 64));
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(7, 64));
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(8, 64));
+        }
+
+        if(slot == TIER_2_CHEST_SLOT) {
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(9, 64));
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(10, 64));
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(11, 64));
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(12, 64));
+        }
+
+        if(slot == TIER_3_CHEST_SLOT) {
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(13, 64));
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(14, 64));
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(15, 64));
+            Containers.dropItemStack(this.level(), this.getX(), this.getY() + 1, this.getZ(), inventory.removeItem(16, 64));
+        }
+    }
+
+    public void setChest(int slot, boolean chested) {
+        if(slot == TIER_1_CHEST_SLOT) {
+            this.entityData.set(HAS_TIER_1_CHEST, chested);
+        } else if(slot == TIER_2_CHEST_SLOT) {
+            this.entityData.set(HAS_TIER_2_CHEST, chested);
+        } else if(slot == TIER_3_CHEST_SLOT) {
+            this.entityData.set(HAS_TIER_3_CHEST, chested);
+        } else {
+            TutorialMod.LOGGER.error("Can't give chest to a Slot that doesn't exist!");
+        }
+    }
+
+    public boolean hasTier1Chest() {
+        return this.entityData.get(HAS_TIER_1_CHEST);
+    }
+    public boolean hasTier2Chest() {
+        return this.entityData.get(HAS_TIER_2_CHEST);
+    }
+    public boolean hasTier3Chest() {
+        return this.entityData.get(HAS_TIER_3_CHEST);
+    }
+
+    public final int getInventorySize() {
+        return getInventorySize(4);
+    }
+
+    public static int getInventorySize(int columns) {
+        return columns * 3 + 5;
+    }
+
+    protected void createInventory() {
+        SimpleContainer simplecontainer = this.inventory;
+        this.inventory = new SimpleContainer(this.getInventorySize());
+        if (simplecontainer != null) {
+            int i = Math.min(simplecontainer.getContainerSize(), this.inventory.getContainerSize());
+
+            for (int j = 0; j < i; j++) {
+                ItemStack itemstack = simplecontainer.getItem(j);
+                if (!itemstack.isEmpty()) {
+                    this.inventory.setItem(j, itemstack.copy());
+                }
+            }
+        }
+    }
+
+    public boolean hasInventoryChanged(Container inventory) {
+        return this.inventory != inventory;
+    }
+
+    @Override
+    public void openCustomInventoryScreen(Player player) {
+        if(!this.level().isClientSide() && isTame()) {
+            ServerPlayer serverPlayer = (ServerPlayer) player;
+            if (serverPlayer.containerMenu != serverPlayer.inventoryMenu) {
+                serverPlayer.closeContainer();
+            }
+
+            serverPlayer.openMenu(new ExtendedMenuProvider<UUID>() {
+                @Override
+                public @Nullable AbstractContainerMenu createMenu(int containerId, Inventory inventory, Player player) {
+                    AbstractContainerMenu menu = new WarturtleMenu(containerId, inventory, WarturtleEntity.this.inventory, WarturtleEntity.this, 4);
+                    menu.addSlotListener(WarturtleEntity.this);
+                    return menu;
+                }
+
+                @Override
+                public Component getDisplayName() {
+                    return Component.literal("Warturtle");
+                }
+
+                @Override
+                public UUID getScreenOpeningData(ServerPlayer player) {
+                    return WarturtleEntity.this.getUUID();
+                }
+            });
+        }
     }
 }
 

@@ -12,6 +12,7 @@ import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerScreen;
 import net.kaupenjoe.tutorialmod.menu.custom.PedestalScreen;
+import net.kaupenjoe.tutorialmod.menu.custom.WarturtleScreen;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPayloadC2S;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
@@ -30,6 +31,7 @@ public class TutorialModClient implements ClientModInitializer {
 
         MenuScreens.register(ModMenuTypes.PEDESTAL_MENU, PedestalScreen::new);
         MenuScreens.register(ModMenuTypes.CRYSTALLIZER_MENU, CrystallizerScreen::new);
+        MenuScreens.register(ModMenuTypes.WARTURTLE_MENU, WarturtleScreen::new);
 
         ModelLayerRegistry.registerModelLayer(ModModelLayerLocations.CAPYBARA, CapybaraModel::createBodyLayer);
         EntityRenderers.register(ModEntities.CAPYBARA, CapybaraRenderer::new);
