@@ -1,0 +1,47 @@
+{
+  "attributes": {
+    "minecraft:gameplay/natural_mob_spawns": {
+      "argument": {
+        "spawn_costs": {},
+        "spawns_by_category": {
+          "monster": [
+            {
+              "type": "minecraft:enderman",
+              "count": {
+                "type": "minecraft:uniform",
+                "max_inclusive": 3,
+                "min_inclusive": 1
+              },
+              "weight": 15
+            }
+          ]
+        }
+      },
+      "modifier": "overlay"
+    },
+    "minecraft:visual/ambient_particles": [
+      {
+        "particle": {
+          "type": "minecraft:end_rod"
+        },
+        "probability": 0.005
+      }
+    ]
+  },
+  "carvers": [],
+  "downfall": 0.0,
+  "effects": {
+    "water_color": "#abab11"
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [
+      "minecraft:end_spike"
+    ]
+  ],
+  "has_precipitation": false,
+  "temperature": 3.0
+}

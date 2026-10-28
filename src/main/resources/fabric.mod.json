@@ -26,6 +26,9 @@
 		],
 		"jei_mod_plugin": [
 			"net.kaupenjoe.tutorialmod.compat.JEITutorialModPlugin"
+		],
+		"terrablender": [
+			"net.kaupenjoe.tutorialmod.TutorialMod"
 		]
 	},
 	"mixins": [

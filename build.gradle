@@ -22,6 +22,7 @@ repositories {
 		name = "ModMaven"
 		url = "https://modmaven.dev"
 	}
+	maven { url = 'https://maven.minecraftforge.net/' }
 }
 
 fabricApi {
@@ -47,6 +48,8 @@ dependencies {
 	compileOnly("mezz.jei:jei-${minecraft_version}-fabric-api:${jei_version}")
 	// at runtime, use the full JEI jar for Fabric
 	implementation "mezz.jei:jei-${minecraft_version}-fabric:${jei_version}"
+
+	implementation 'com.github.glitchfiend:TerraBlender-fabric:26.3-26.3.0.0.9'
 }
 
 processResources {
